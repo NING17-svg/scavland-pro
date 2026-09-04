@@ -156,3 +156,4 @@ build environment variables, connect the generated GitHub repository to
 Cloudflare Builds, bind the exact authorized domain, verify that a push updates
 the live site, and then verify GA4, GSC, Bing Webmaster sitemap submission, and
 the initial IndexNow notification.
+<!-- ga4-measurement-id: G-0X0S9163R3 -->
