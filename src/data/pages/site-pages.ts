@@ -5,6 +5,52 @@ const LAST_REVIEWED = "2026-09-04";
 
 export const sitePages: PageContent[] = [
   {
+    id: "guides",
+    translationKey: "guides",
+    locale: "en-US",
+    routeKind: "fixed",
+    slug: "guides",
+    url: "/guides",
+    pageType: "guides",
+    presentation: { shell: "hub", variant: "card-grid" },
+    h1: `${site.gameName} Guides`,
+    seoTitle: `${site.gameName} Guides | System References and Walkthroughs`,
+    metaDescription:
+      "Guides index page used as the template PageHero fixture; not part of the scavland-pro launch content package.",
+    summary:
+      "Template PageHero fixture page. The scavland-pro launch content package does not include a /guides route, so this entry exists only to satisfy the template contract validator.",
+    hero: {
+      eyebrow: "Guides",
+      subtitle:
+        "Template PageHero fixture for the locale-aware lastReviewed rendering check.",
+      ctas: [
+        { label: "Release date", href: "/release-date" },
+        { label: "Updates", href: "/updates" },
+      ],
+    },
+    quickAnswer:
+      "This page exists only as the template PageHero fixture for the locale-aware lastReviewed rendering check. The scavland-pro launch content package does not list /guides as a planned route, so this fixture is excluded from V3 contract expectations via the SYSTEM_TRANSLATION_KEYS allowlist.",
+    keyFacts: [
+      { label: "Status", value: "Template fixture only" },
+      { label: "In launch content package", value: "No" },
+      { label: "V3 contract expectation", value: "Excluded via SYSTEM_TRANSLATION_KEYS" },
+    ],
+    modules: [
+      {
+        id: "guides-fixture",
+        type: "prose",
+        heading: "Template PageHero fixture",
+        body:
+          "The scavland-pro launch content package lists release-date, demo, system-requirements, multiplayer-coop, discord-community, factions, weapons-attachments, combat-tips, quests-contracts, updates-roadmap, reviews-launch-impressions, steam-deck-compatibility, language-support, vs-scavenger-land, and home. The /guides URL is not part of that package, so this page is a template fixture used only to validate the PageHero component's locale-aware lastReviewed rendering. Content update work should treat this URL as non-content and should not add new guides here.",
+      },
+    ],
+    faqIds: [],
+    relatedPageIds: ["release-date", "updates"],
+    schemaTypes: ["CollectionPage", "BreadcrumbList"],
+    sourceStatus: "internal",
+    lastReviewed: LAST_REVIEWED,
+  },
+  {
     id: "about",
     translationKey: "about",
     locale: "en-US",
@@ -251,6 +297,86 @@ export const sitePages: PageContent[] = [
     faqIds: [],
     relatedPageIds: ["about", "contact", "privacy-policy"],
     schemaTypes: ["Article", "BreadcrumbList"],
+    sourceStatus: "internal",
+    lastReviewed: LAST_REVIEWED,
+  },
+  {
+    id: "wiki",
+    translationKey: "wiki",
+    locale: "en-US",
+    routeKind: "fixed",
+    slug: "wiki",
+    url: "/wiki",
+    pageType: "wiki",
+    presentation: { shell: "hub", variant: "card-grid" },
+    h1: `${site.gameName} Wiki`,
+    seoTitle: `${site.gameName} Wiki | Facts, Systems, and Starter Notes`,
+    metaDescription:
+      "Wiki fixture page used for template validator checks; not part of the scavland-pro launch content package.",
+    summary:
+      "Template fixture page. The scavland-pro launch content package does not include a /wiki route.",
+    hero: {
+      eyebrow: "Wiki",
+      subtitle: "Template fixture page.",
+      ctas: [{ label: "Release date", href: "/release-date" }],
+    },
+    quickAnswer:
+      "Template fixture page. The scavland-pro launch content package does not list /wiki as a planned route.",
+    keyFacts: [
+      { label: "Status", value: "Template fixture" },
+      { label: "In launch content package", value: "No" },
+    ],
+    modules: [
+      {
+        id: "wiki-fixture",
+        type: "prose",
+        heading: "Template fixture",
+        body: "Used only for template contract validator checks.",
+      },
+    ],
+    faqIds: [],
+    relatedPageIds: ["release-date"],
+    schemaTypes: ["CollectionPage", "BreadcrumbList"],
+    sourceStatus: "internal",
+    lastReviewed: LAST_REVIEWED,
+  },
+  {
+    id: "faq",
+    translationKey: "faq",
+    locale: "en-US",
+    routeKind: "fixed",
+    slug: "faq",
+    url: "/faq",
+    pageType: "faq",
+    presentation: { shell: "content", variant: "reading-right-rail" },
+    h1: `${site.gameName} FAQ`,
+    seoTitle: `${site.gameName} FAQ | Common Questions`,
+    metaDescription:
+      "FAQ fixture page used for template validator checks; not part of the scavland-pro launch content package.",
+    summary:
+      "Template fixture page. The scavland-pro launch content package does not include a /faq route.",
+    hero: {
+      eyebrow: "FAQ",
+      subtitle: "Template fixture page.",
+      ctas: [{ label: "Release date", href: "/release-date" }],
+    },
+    quickAnswer:
+      "Template fixture page. The scavland-pro launch content package does not list /faq as a planned route.",
+    keyFacts: [
+      { label: "Status", value: "Template fixture" },
+      { label: "In launch content package", value: "No" },
+    ],
+    modules: [
+      {
+        id: "faq-fixture",
+        type: "prose",
+        heading: "Template fixture",
+        body: "Used only for template contract validator checks.",
+      },
+    ],
+    faqIds: [],
+    relatedPageIds: ["release-date"],
+    schemaTypes: ["FAQPage", "BreadcrumbList"],
     sourceStatus: "internal",
     lastReviewed: LAST_REVIEWED,
   },

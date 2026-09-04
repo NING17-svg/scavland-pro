@@ -793,7 +793,7 @@ export const scavlandPages: PageContent[] = [
 
   {
     id: "updates",
-    translationKey: "updates",
+    translationKey: "updates-roadmap",
     locale: "en-US",
     routeKind: "fixed",
     slug: "updates",
@@ -876,7 +876,7 @@ export const scavlandPages: PageContent[] = [
 
   {
     id: "reviews",
-    translationKey: "reviews",
+    translationKey: "reviews-launch-impressions",
     locale: "en-US",
     routeKind: "fixed",
     slug: "reviews",
@@ -950,7 +950,7 @@ export const scavlandPages: PageContent[] = [
 
   {
     id: "steam-deck",
-    translationKey: "steam-deck",
+    translationKey: "steam-deck-compatibility",
     locale: "en-US",
     routeKind: "fixed",
     slug: "steam-deck",

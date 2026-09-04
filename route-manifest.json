@@ -1,0 +1,222 @@
+[
+  {
+    "id": "home",
+    "translationKey": "home",
+    "locale": "en-US",
+    "routeKind": "home",
+    "url": "/",
+    "alternates": {
+      "en-US": "/"
+    }
+  },
+  {
+    "id": "about",
+    "translationKey": "about",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/about",
+    "alternates": {
+      "en-US": "/about"
+    }
+  },
+  {
+    "id": "combat-tips",
+    "translationKey": "combat-tips",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/combat-tips",
+    "alternates": {
+      "en-US": "/combat-tips"
+    }
+  },
+  {
+    "id": "contact",
+    "translationKey": "contact",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/contact",
+    "alternates": {
+      "en-US": "/contact"
+    }
+  },
+  {
+    "id": "demo",
+    "translationKey": "demo",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/demo",
+    "alternates": {
+      "en-US": "/demo"
+    }
+  },
+  {
+    "id": "discord-community",
+    "translationKey": "discord-community",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/discord-community",
+    "alternates": {
+      "en-US": "/discord-community"
+    }
+  },
+  {
+    "id": "factions",
+    "translationKey": "factions",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/factions",
+    "alternates": {
+      "en-US": "/factions"
+    }
+  },
+  {
+    "id": "faq",
+    "translationKey": "faq",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/faq",
+    "alternates": {
+      "en-US": "/faq"
+    }
+  },
+  {
+    "id": "guides",
+    "translationKey": "guides",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/guides",
+    "alternates": {
+      "en-US": "/guides"
+    }
+  },
+  {
+    "id": "language-support",
+    "translationKey": "language-support",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/language-support",
+    "alternates": {
+      "en-US": "/language-support"
+    }
+  },
+  {
+    "id": "multiplayer-coop",
+    "translationKey": "multiplayer-coop",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/multiplayer-coop",
+    "alternates": {
+      "en-US": "/multiplayer-coop"
+    }
+  },
+  {
+    "id": "privacy-policy",
+    "translationKey": "privacy-policy",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/privacy-policy",
+    "alternates": {
+      "en-US": "/privacy-policy"
+    }
+  },
+  {
+    "id": "quests-contracts",
+    "translationKey": "quests-contracts",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/quests-contracts",
+    "alternates": {
+      "en-US": "/quests-contracts"
+    }
+  },
+  {
+    "id": "release-date",
+    "translationKey": "release-date",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/release-date",
+    "alternates": {
+      "en-US": "/release-date"
+    }
+  },
+  {
+    "id": "reviews",
+    "translationKey": "reviews-launch-impressions",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/reviews",
+    "alternates": {
+      "en-US": "/reviews"
+    }
+  },
+  {
+    "id": "steam-deck",
+    "translationKey": "steam-deck-compatibility",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/steam-deck",
+    "alternates": {
+      "en-US": "/steam-deck"
+    }
+  },
+  {
+    "id": "system-requirements",
+    "translationKey": "system-requirements",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/system-requirements",
+    "alternates": {
+      "en-US": "/system-requirements"
+    }
+  },
+  {
+    "id": "terms",
+    "translationKey": "terms",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/terms",
+    "alternates": {
+      "en-US": "/terms"
+    }
+  },
+  {
+    "id": "updates",
+    "translationKey": "updates-roadmap",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/updates",
+    "alternates": {
+      "en-US": "/updates"
+    }
+  },
+  {
+    "id": "vs-scavenger-land",
+    "translationKey": "vs-scavenger-land",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/vs-scavenger-land",
+    "alternates": {
+      "en-US": "/vs-scavenger-land"
+    }
+  },
+  {
+    "id": "weapons-attachments",
+    "translationKey": "weapons-attachments",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/weapons-attachments",
+    "alternates": {
+      "en-US": "/weapons-attachments"
+    }
+  },
+  {
+    "id": "wiki",
+    "translationKey": "wiki",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/wiki",
+    "alternates": {
+      "en-US": "/wiki"
+    }
+  }
+]
