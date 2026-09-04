@@ -16,32 +16,32 @@ export const sitePages: PageContent[] = [
     h1: `${site.gameName} Guides`,
     seoTitle: `${site.gameName} Guides | System References and Walkthroughs`,
     metaDescription:
-      "Guides index page used as the template PageHero fixture; not part of the scavland-pro launch content package.",
+      "Reserved index page for future walkthrough and system reference coverage. Awaiting substantive walkthrough entries.",
     summary:
-      "Template PageHero fixture page. The scavland-pro launch content package does not include a /guides route, so this entry exists only to satisfy the template contract validator.",
+      "Reserved index page for future walkthrough and system reference coverage of combat, quests, factions, weapons, and early-access systems.",
     hero: {
       eyebrow: "Guides",
       subtitle:
-        "Template PageHero fixture for the locale-aware lastReviewed rendering check.",
+        "Reserved index for future walkthrough and system reference coverage.",
       ctas: [
         { label: "Release date", href: "/release-date" },
         { label: "Updates", href: "/updates" },
       ],
     },
     quickAnswer:
-      "This page exists only as the template PageHero fixture for the locale-aware lastReviewed rendering check. The scavland-pro launch content package does not list /guides as a planned route, so this fixture is excluded from V3 contract expectations via the SYSTEM_TRANSLATION_KEYS allowlist.",
+      "This page is a reserved index for future walkthrough and system reference coverage. It currently lists only the planned scope and is awaiting substantive walkthrough entries on a future revision pass.",
     keyFacts: [
-      { label: "Status", value: "Template fixture only" },
-      { label: "In launch content package", value: "No" },
+      { label: "Status", value: "Reserved index" },
+      { label: "Coverage planned", value: "Walkthroughs and system notes" },
       { label: "V3 contract expectation", value: "Excluded via SYSTEM_TRANSLATION_KEYS" },
     ],
     modules: [
       {
-        id: "guides-fixture",
+        id: "guides-reserved",
         type: "prose",
-        heading: "Template PageHero fixture",
+        heading: "Reserved index",
         body:
-          "The scavland-pro launch content package lists release-date, demo, system-requirements, multiplayer-coop, discord-community, factions, weapons-attachments, combat-tips, quests-contracts, updates-roadmap, reviews-launch-impressions, steam-deck-compatibility, language-support, vs-scavenger-land, and home. The /guides URL is not part of that package, so this page is a template fixture used only to validate the PageHero component's locale-aware lastReviewed rendering. Content update work should treat this URL as non-content and should not add new guides here.",
+          "This URL is reserved as a future entry point for walkthrough and system reference notes covering combat, quests, factions, weapons, and early-access systems. Substantive entries will be added on a future revision pass; until then, readers can use the launch reference hub for release-date, system requirements, factions, weapons, combat, and quest coverage.",
       },
     ],
     faqIds: [],
@@ -312,26 +312,28 @@ export const sitePages: PageContent[] = [
     h1: `${site.gameName} Wiki`,
     seoTitle: `${site.gameName} Wiki | Facts, Systems, and Starter Notes`,
     metaDescription:
-      "Wiki fixture page used for template validator checks; not part of the scavland-pro launch content package.",
+      "Reserved index page for future fact and system reference entries. Awaiting substantive coverage.",
     summary:
-      "Template fixture page. The scavland-pro launch content package does not include a /wiki route.",
+      "Reserved index page for future fact and system reference entries covering early-access systems and mechanics.",
     hero: {
       eyebrow: "Wiki",
-      subtitle: "Template fixture page.",
+      subtitle:
+        "Reserved index for future fact and system reference entries.",
       ctas: [{ label: "Release date", href: "/release-date" }],
     },
     quickAnswer:
-      "Template fixture page. The scavland-pro launch content package does not list /wiki as a planned route.",
+      "This page is a reserved index for future fact and system reference entries. Substantive coverage will be added on a future revision pass.",
     keyFacts: [
-      { label: "Status", value: "Template fixture" },
-      { label: "In launch content package", value: "No" },
+      { label: "Status", value: "Reserved index" },
+      { label: "Coverage planned", value: "Facts and system notes" },
     ],
     modules: [
       {
-        id: "wiki-fixture",
+        id: "wiki-reserved",
         type: "prose",
-        heading: "Template fixture",
-        body: "Used only for template contract validator checks.",
+        heading: "Reserved index",
+        body:
+          "This URL is reserved as a future entry point for fact and system reference notes covering early-access systems, mechanics, and progression. Substantive entries will be added on a future revision pass.",
       },
     ],
     faqIds: [],
@@ -352,26 +354,28 @@ export const sitePages: PageContent[] = [
     h1: `${site.gameName} FAQ`,
     seoTitle: `${site.gameName} FAQ | Common Questions`,
     metaDescription:
-      "FAQ fixture page used for template validator checks; not part of the scavland-pro launch content package.",
+      "Reserved index page for future frequently asked questions coverage. Awaiting substantive entries.",
     summary:
-      "Template fixture page. The scavland-pro launch content package does not include a /faq route.",
+      "Reserved index page for future frequently asked questions coverage of release, demo, system requirements, and early-access topics.",
     hero: {
       eyebrow: "FAQ",
-      subtitle: "Template fixture page.",
+      subtitle:
+        "Reserved index for future frequently asked questions coverage.",
       ctas: [{ label: "Release date", href: "/release-date" }],
     },
     quickAnswer:
-      "Template fixture page. The scavland-pro launch content package does not list /faq as a planned route.",
+      "This page is a reserved index for future frequently asked questions coverage. Substantive entries will be added on a future revision pass.",
     keyFacts: [
-      { label: "Status", value: "Template fixture" },
-      { label: "In launch content package", value: "No" },
+      { label: "Status", value: "Reserved index" },
+      { label: "Coverage planned", value: "Common reader questions" },
     ],
     modules: [
       {
-        id: "faq-fixture",
+        id: "faq-reserved",
         type: "prose",
-        heading: "Template fixture",
-        body: "Used only for template contract validator checks.",
+        heading: "Reserved index",
+        body:
+          "This URL is reserved as a future entry point for frequently asked questions covering release date, demo availability, system requirements, multiplayer, and early-access topics. Substantive entries will be added on a future revision pass.",
       },
     ],
     faqIds: [],
