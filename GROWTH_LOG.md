@@ -6,6 +6,14 @@ Record every growth-relevant edit here. Keep entries short, factual, and useful 
 
 ## Change Log
 
+### 2026-09-04 - Adsterra integration (scavland-pro launch)
+
+- Task: Populate the six fixed Adsterra unit values (Native Banner, 728x90, 468x60, 320x50, 160x600, Smartlink) after launch.
+- Files changed: `src/data/ads.ts`.
+- URLs affected: None; ad injection reuses the page-shell containers generated at launch.
+- Ad baseline: All six fixed Adsterra unit values now resolve to the live placement codes; no template/structural change. The fixed AdSense ownership trio is untouched.
+- Verification: `npm run verify` (typecheck, lint, template/content/indexnow validation, build, rendered-SEO) passes locally.
+
 ### 2026-08-12 - Static discovery and review freshness baseline added
 
 - Task: Add locale-aware static search, automatic recent updates, visible review dates, and browser metadata/security defaults to the shared template.
