@@ -24,14 +24,14 @@ export interface SiteConfig {
 }
 
 export const site: SiteConfig = {
-  name: "Template Game Guide",
-  brandMark: "GG",
-  gameName: "Template Game",
-  domain: "example.com",
-  baseUrl: (process.env.NEXT_PUBLIC_SITE_URL || "https://example.com").replace(/\/$/, ""),
+  name: "Scavland",
+  brandMark: "Scav",
+  gameName: "Scavland",
+  domain: "scavland.pro",
+  baseUrl: (process.env.NEXT_PUBLIC_SITE_URL || "https://scavland.pro").replace(/\/$/, ""),
   description:
-    "A neutral game guide hub template for launch pages, wiki notes, guides, release information, and FAQs.",
-  tagline: "Guides, wiki notes, release info, and launch FAQs in one clean hub.",
+    "Scavland guide hub — release date, demo, system requirements, factions, weapons, combat, quests, multiplayer status, Steam Deck playability, and the Steam Early Access survival RPG by NoShadow on AppID 3373500.",
+  tagline: "Hardcore top-down pixel art survival RPG reference hub for Scavland on Steam.",
   primaryLocale: "en-US",
   locales: [
     {
@@ -53,16 +53,16 @@ export const site: SiteConfig = {
       },
     },
   ],
-  author: "Template Game Guide",
+  author: "Scavland Guide",
   gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "",
   bingSiteAuthCode: process.env.NEXT_PUBLIC_BING_SITE_AUTH_CODE || "",
   officialSources: [
     {
-      label: "Official website",
-      href: "https://example.com",
-      description: "Replace this with the game publisher or developer website.",
+      label: "Steam store page for Scavland",
+      href: "https://store.steampowered.com/app/3373500/Scavland/",
+      description: "Official Steam store listing for Scavland AppID 3373500 by developer NoShadow.",
     },
   ],
   disclaimer:
-    "This is an unofficial fan guide template. Replace placeholder facts with official sources before launch.",
+    "Unofficial community guide. All hard current-game facts are sourced from the official Steam store page and the developer's official channels.",
 };

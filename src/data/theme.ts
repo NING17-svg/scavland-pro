@@ -1,46 +1,54 @@
 import type { ThemeConfig } from "@/types/theme";
 
+// Scavland — V3 dark bunker-survival theme.
+// Implemented strictly from /site-launch/tasks/scavland-pro/design/theme-spec.md.
+// Single shared theme for every launch locale (en-US); no per-locale token set,
+// shell variant, or visual direction exists. Identity is conveyed through
+// bunker-charcoal surfaces, aged parchment foreground type, Soviet-blood red
+// accents, hazard-amber highlights, and a faint industrial grid motif — never
+// through the official logo.
+
 export const theme = {
-  mode: "light",
+  mode: "dark",
   tokens: {
-    pageBg: "#f5f6f1",
-    surface1: "#ffffff",
-    surface2: "#eef2ed",
-    surface3: "#e4e9e3",
-    surfaceInverse: "#18201d",
-    textPrimary: "#18201d",
-    textMuted: "#5d6862",
-    textInverse: "#ffffff",
-    textOnAccentPrimary: "#ffffff",
-    textLink: "#2f6f5e",
-    focusRing: "#2f6f5e",
-    line: "#d8ded7",
-    lineStrong: "#7d8982",
-    accentPrimary: "#2f6f5e",
-    accentSecondary: "#b85c38",
-    accentBright: "#c49a35",
-    statusConfirmed: "#2f6f5e",
-    statusCaution: "#9b651f",
-    statusUnknown: "#69736e",
+    pageBg: "#1a1b1f",
+    surface1: "#23242a",
+    surface2: "#2c2d34",
+    surface3: "#363740",
+    surfaceInverse: "#ece4cb",
+    textPrimary: "#ece4cb",
+    textMuted: "#a59c87",
+    textInverse: "#1a1b1f",
+    textOnAccentPrimary: "#f6efd6",
+    textLink: "#6fb6c4",
+    focusRing: "#f0b956",
+    line: "#3a3b42",
+    lineStrong: "#6b5a44",
+    accentPrimary: "#9c2f2a",
+    accentSecondary: "#5a6975",
+    accentBright: "#f0b956",
+    statusConfirmed: "#8fbf6a",
+    statusCaution: "#e8a847",
+    statusUnknown: "#b5ad9b",
   },
   typography: {
-    headingFamily: "Inter, ui-sans-serif, system-ui, sans-serif",
-    bodyFamily: "Inter, ui-sans-serif, system-ui, sans-serif",
+    headingFamily: "Oswald, 'Roboto Condensed', 'Helvetica Neue', Arial, sans-serif",
+    bodyFamily: "Inter, 'Helvetica Neue', Arial, sans-serif",
     headingWeight: 800,
   },
   shape: {
-    radius: "8px",
+    radius: "4px",
     borderWidth: "1px",
-    shadow: "0 18px 50px rgba(24, 32, 29, 0.08)",
-    hoverLift: "-2px",
+    shadow: "0 1px 0 0 rgba(0, 0, 0, 0.45)",
+    hoverLift: "2px",
   },
   density: "comfortable",
-  background: { mode: "solid", overlay: 0, position: "center" },
+  background: { mode: "gradient", overlay: 0.18, position: "top" },
   variants: {
     home: "split-panel",
     hub: "card-grid",
     content: "reading-right-rail",
     workspace: "full-width",
   },
-  decoration: { motif: "none", intensity: "low" },
+  decoration: { motif: "grid", intensity: "low" },
 } satisfies ThemeConfig;

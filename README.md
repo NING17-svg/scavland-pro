@@ -1,4 +1,4 @@
-# Game Guide Site Template
+# Scavland Guide
 
 This is the V3-capable Next.js seed template for the `one-click-builder` role. It provides
 stable page shells, guide modules, configuration-driven locale routes, generic entity
