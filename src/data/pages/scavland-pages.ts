@@ -74,6 +74,33 @@ const SCAVENGER_LAND = {
   description: "Unrelated mobile game referenced only to disambiguate from Scavland.",
 };
 
+const PLAYERS_UA = {
+  label: "players.com.ua — Scavland Early Access launch coverage",
+  href: "https://players.com.ua/en/news/post-apocalyptic-survival-rpg-scavland-enters-early-access-on-september-4",
+  description:
+    "Editorial launch-window coverage of Scavland positioning the game against S.T.A.L.K.E.R. and Tarkov-style extraction survival peers.",
+};
+
+const SCAVLAND_WIKI_HUB = {
+  label: "Scavland community wiki (scavland.wiki)",
+  href: "https://scavland.wiki/",
+  description: "Independent community wiki used as cross-reference for community-published Scavland guide coverage.",
+};
+
+const SCAVLAND_WIKI_DEATH = {
+  label: "Scavland community wiki — Death & recovery guide",
+  href: "https://scavland.wiki/guides/death-and-recovery/",
+  description:
+    "Independent community wiki page covering Scavland death penalties, dropped backpacks, beacon markers, and safe recovery expeditions.",
+};
+
+const STEAM_DISCUSSIONS = {
+  label: "Steam Discussions for Scavland (AppID 3373500)",
+  href: "https://steamcommunity.com/app/3373500/discussions/",
+  description:
+    "Public Steam Discussions index, including the developer-pinned Scavland vs Zero Sievert comparison thread and the early-access Death? thread.",
+};
+
 export const scavlandPages: PageContent[] = [
   {
     id: "release-date",
@@ -1233,6 +1260,216 @@ export const scavlandPages: PageContent[] = [
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "official",
     lastReviewed: LAST_REVIEWED,
+  },
+
+  {
+    id: "death-and-recovery",
+    translationKey: "death-and-recovery",
+    locale: "en-US",
+    routeKind: "fixed",
+    slug: "death-and-recovery",
+    url: "/death-and-recovery",
+    pageType: "guide",
+    presentation: { shell: "content", variant: "reading-right-rail" },
+    h1: "Scavland Death and Loot Recovery: What You Lose and How to Get It Back",
+    seoTitle: "Scavland Death and Loot Recovery: Dropped Backpacks, Beacons, Recovery Runs",
+    metaDescription:
+      "Scavland death and loot recovery covers what death costs on a failed Zalesye run, how dropped backpacks and beacon markers work, and how to plan a safe recovery expedition under scarce ammo.",
+    summary:
+      "Scavland death and loot recovery in the Act I Early Access build focuses on the dropped backpack, the beacon marker, and a follow-up recovery expedition rather than an advertised permadeath mechanic. The exact magnitude of the death penalty is not announced as of 2026-09-04, and a difficulty toggle is not announced as of 2026-09-04.",
+    hero: {
+      eyebrow: "Guide",
+      subtitle:
+        "What a death actually costs in Scavland Act I Early Access, how the dropped backpack and beacon marker work, and how to plan a recovery expedition under scarce ammo and jam-prone weapons.",
+      ctas: [
+        { label: "Combat tips", href: "/combat-tips" },
+        { label: "Weapons & attachments", href: "/weapons-attachments" },
+        { label: "Factions", href: "/factions" },
+      ],
+    },
+    quickAnswer:
+      "Scavland death and loot recovery in the Act I Early Access build centers on the dropped-backpack mechanic and a beacon marker that lets the player run back for the gear, rather than an advertised permadeath. The exact magnitude of the death penalty (gear loss tiers, container durability loss, stamina or condition penalties) is not announced as of 2026-09-04, a difficulty toggle is not announced as of 2026-09-04, and permadeath is not listed as a feature on the Steam store page for AppID 3373500. Plan for recovery expeditions: bring a melee loadout for the bunker approach, conserve ammo on the way back, and treat the beacon marker as the timer for the window you have to collect the bag.",
+    keyFacts: [
+      { label: "Death penalty", value: "Dropped backpack + beacon marker (magnitude unconfirmed)" },
+      { label: "Permadeath", value: "Not an advertised feature on the Steam store page" },
+      { label: "Difficulty toggle", value: "Not announced as of 2026-09-04" },
+      { label: "Recovery loop", value: "Return trip from a prepared safe zone to the beacon marker" },
+      { label: "Resource pressure", value: "Scarce ammo and jam-prone weapons on recovery runs" },
+    ],
+    modules: [
+      {
+        id: "death-and-recovery-cost",
+        type: "prose",
+        heading: "What a Death Actually Costs in Scavland",
+        body:
+          "Scavland is framed as a hardcore top-down pixel art survival RPG on the Steam store page, with scarce ammunition, jamming weapons, lethal mutants, and hostile survivors called out as part of the pitch. The hardcore framing means a death has to cost something, but the exact magnitude of the death penalty is not announced as of 2026-09-04. What the public sources confirm is the dropped-backpack mechanic: when a player dies, the gear they were carrying stays in the world rather than vanishing, and the recovery loop is built around going back for it.\n\nThe death-cost story therefore splits into two layers. The confirmed layer is the backpack drop and the beacon marker that points back to where the bag landed. The unconfirmed layer is everything around it: the exact gear-loss tiers, whether a container (backpack, plate carrier, helmet) loses durability on death, whether the player respawns with a starter loadout or empty-handed, whether stamina or condition penalties apply for the next run, and whether any progress (quest stage, faction standing, contract) is rolled back. These details are not announced as of 2026-09-04, and treating them as confirmed would mean inventing mechanics that the developer has not published.\n\nA frequent Steam Discussions thread titled simply \"Death?\" by user Lunos with a single reply and no visible developer answer reflects exactly this uncertainty, and is the kind of public signal that says the buyer question is live rather than answered. Use the public sources only: the Steam store page for AppID 3373500 for the hardcore pitch, the Steam Discussions index for the live question, and the community wiki's death-and-recovery guide for the community-published framing. Confirm anything beyond those in-game before relying on it for a build.",
+        links: [STEAM_STORE, STEAM_DISCUSSIONS, SCAVLAND_WIKI_DEATH],
+      },
+      {
+        id: "death-and-recovery-backpack",
+        type: "prose",
+        heading: "The Dropped-Backpack Mechanic",
+        body:
+          "The dropped-backpack mechanic is the single most important fact to internalise before a deep Zalesye or high-radiation run. On death, the gear you were carrying stays in the world as a lootable container at the spot where you died. That backpack holds the weapons, attachments, ammo, meds, and quest items you walked in with, and it does not despawn instantly. The exact backpack decay timer, the exact loot decay rules, and whether enemy NPCs interact with the dropped bag are not announced as of 2026-09-04; treat the bag as recoverable for at least the length of a single recovery expedition and do not assume it survives indefinitely.\n\nPractical reading: if you go into a bunker with your best loadout and die, the run is not over. You can return to the bag, recover most of what you walked in with, and resume the run from a settlement or safe zone. The cost is time, ammo spent on the way back, and the risk that the recovery expedition itself ends in another death, in which case the second backpack stacks on top of the first. Plan recovery runs as their own engagement, not as a free second chance.",
+        links: [SCAVLAND_WIKI_DEATH, STEAM_STORE],
+      },
+      {
+        id: "death-and-recovery-beacon",
+        type: "prose",
+        heading: "Beacon Markers and the Recovery Window",
+        body:
+          "A beacon marker is the in-world pointer that shows where the dropped backpack landed. The exact beacon marker UI (map pin, on-screen arrow, distance readout, decay timer) is not announced as of 2026-09-04, but the community-published framing on the scavland.wiki death-and-recovery guide treats the beacon as the spine of the recovery loop. Practically, the beacon is the timer: it tells you how long the window is open before the bag is no longer recoverable in the state you expect.\n\nHow to use the beacon well: read the marker's distance and rough direction the moment the run starts, not after you have already wasted a settlement visit. Decide the recovery loadout before you leave the safe zone — a melee weapon to keep noise low, one ranged sidearm for emergencies, and just enough ammo and meds to survive the second approach. Avoid fast-travel back into the danger zone: a recovery expedition is a fresh engagement with its own ammo budget, and overcommitting ammo on the way back is the most common way a recoverable death becomes a permanent loss.",
+        links: [SCAVLAND_WIKI_DEATH, SCAVLAND_WIKI_HUB],
+      },
+      {
+        id: "death-and-recovery-prep",
+        type: "prose",
+        heading: "How to Prepare a Recovery Expedition Under Scarce Ammo",
+        body:
+          "Recovery expeditions are run under the same scarce-ammo, jam-prone-weapon pressure as the original Zalesye run, which is why preparation matters more than firepower. The combat verbs that the Steam store names — firearms, melee, stealth, and suppression — apply to the recovery trip exactly as they apply to the first push. Stealth the approach, melee the close encounters, and reserve firearms for the suppression pin that lets you grab the bag and extract. The full attachment options that shape recoil and ammo capacity are on the Scavland weapons page, and a controllable-recoil build is the right tool for a recovery expedition that may need to suppress a bunker entrance.\n\nLoadout rules for a recovery expedition:\n\n- Primary: a melee tool with enough reach for bunker corridors; this keeps the muzzle-flash signature low and saves the rifle ammo for the extraction.\n- Secondary: a controllable-recoil sidearm with one magazine for emergencies; do not walk in with a primary magazine budget.\n- Meds: at least one healing item and one stamina item; the exact stack sizes are not announced as of 2026-09-04, so bring what you can spare without breaking the settlement loadout.\n- Backup plan: know the nearest settlement or safe zone before you leave, so a second death does not strand you across the map.\n\nThe exact ammo economy, the exact attachment slots that affect jamming, and the exact jamming failure rules are not announced as of 2026-09-04. Treat every recovery expedition as a real engagement, not a free do-over.",
+        links: [STEAM_STORE, SCAVLAND_WIKI_DEATH],
+      },
+      {
+        id: "death-and-recovery-permadeath",
+        type: "callout",
+        tone: "caution",
+        title: "Permadeath and difficulty toggle — explicitly unconfirmed",
+        body:
+          "Permadeath is not listed as a feature on the Steam store page for Scavland AppID 3373500. The hardcore framing covers scarce ammo, jamming weapons, lethal mutants, and hostile survivors, but the store does not promise that a death deletes the save or wipes the run. A difficulty toggle (Easy / Normal / Hardcore / Survival) is not announced as of 2026-09-04, so the difficulty framing you experience is whatever the Early Access build ships with rather than a chosen setting.\n\nUnconfirmed for the Act I Early Access build as of 2026-09-04: exact death-penalty magnitude, exact gear-loss tiers, exact backpack decay timer, exact beacon marker decay, exact difficulty toggle list, and any permadeath or hardcore-exclusive save mode. Track any change on the Steam store page for AppID 3373500 and the Steam Community hub news feed.",
+      },
+    ],
+    faqIds: [
+      "death-penalty",
+      "death-backpack",
+      "death-beacon",
+      "death-permadeath",
+      "death-difficulty",
+    ],
+    relatedPageIds: ["combat-tips", "weapons-attachments", "factions"],
+    schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
+    sourceStatus: "official",
+    lastReviewed: "2026-09-05",
+  },
+
+  {
+    id: "vs-zero-sievert",
+    translationKey: "vs-zero-sievert",
+    locale: "en-US",
+    routeKind: "fixed",
+    slug: "vs-zero-sievert",
+    url: "/vs-zero-sievert",
+    pageType: "comparison",
+    presentation: { shell: "content", variant: "reading-right-rail" },
+    h1: "Scavland vs Zero Sievert: How the Two Extraction Survival RPGs Differ",
+    seoTitle: "Scavland vs Zero Sievert: 7 Core Differences for the Buy Decision",
+    metaDescription:
+      "Scavland vs Zero Sievert compared on ballistics, attachments, factions, the Mist hazard, handcrafted overworld plus procedural bunkers, co-op roadmap, and Act I Early Access launch.",
+    summary:
+      "Scavland vs Zero Sievert is the comparison the developer-pinned Steam Discussions thread (by Lucasmml, 2026-08-31) makes explicit. Scavland launches as a single-player Act I Early Access build with 25+ weapons and 300+ attachments, a 10-faction reputation system, the Mist anomaly weather, a handcrafted overworld plus procedural underground bunkers, and a planned co-op roadmap. Zero Sievert is a separate post-apocalyptic extraction survival title; only Scavland-side facts are asserted as confirmed here.",
+    hero: {
+      eyebrow: "Comparison",
+      subtitle:
+        "The developer-pinned comparison question on Steam, the concrete mechanical axes where Scavland differs from Zero Sievert, and a plain buy recommendation for a Zero Sievert owner.",
+      ctas: [
+        { label: "Release date", href: "/release-date" },
+        { label: "Factions", href: "/factions" },
+        { label: "Weapons & attachments", href: "/weapons-attachments" },
+      ],
+    },
+    quickAnswer:
+      "Scavland vs Zero Sievert is the explicit comparison thread pinned by the developer on Steam Discussions (by Lucasmml, 2026-08-31), which is the strongest possible signal that buyers arrive with this question. Scavland launches as a single-player Act I Early Access build on Sep 4, 2026 with 25+ weapons and 300+ attachments, a 10-faction dynamic reputation system, the Mist anomaly as a named weather hazard, a handcrafted open world layered with procedural underground bunkers, and a planned cooperative multiplayer roadmap. Zero Sievert is a separate post-apocalyptic extraction survival title; only Scavland-side facts are asserted as confirmed in this comparison, with Zero Sievert framing drawn from the developer-pinned discussion context.",
+    keyFacts: [
+      { label: "Scavland mode at launch", value: "Single-player; co-op planned in future updates" },
+      { label: "Scavland weapons & attachments", value: "25+ weapons and 300+ attachments" },
+      { label: "Scavland factions", value: "10 factions with dynamic reputation" },
+      { label: "Scavland world", value: "Handcrafted overworld + procedural underground bunkers" },
+      { label: "Named hazard", value: "Mist anomaly weather" },
+      { label: "Co-op roadmap", value: "Listed as planned on the Steam store page" },
+    ],
+    modules: [
+      {
+        id: "vs-zero-sievert-thread",
+        type: "prose",
+        heading: "Why This Comparison Question Reaches the Store Page",
+        body:
+          "Scavland vs Zero Sievert is not a side comparison: it is the explicit title of a Steam Discussions thread pinned by the developer Lucasmml on 2026-08-31, which is the strongest possible signal that buyers arrive with this question before they click wishlist or buy. The thread framing is the buyer's framing — what makes Scavland different enough from Zero Sievert to be worth purchasing — and the developer pinned it rather than letting it drift into general discussion. The store page positions Scavland against the broader S.T.A.L.K.E.R. / Tarkov-style extraction survival peer set, and the editorial launch coverage on players.com.ua repeats the same framing, so the comparison question is part of the launch-time intent graph rather than a niche curiosity.\n\nThe community-published hub analysis on scavland.wiki organises the comparison under \"7 core differences: ballistics, attachments, Mist anomaly weather, co-op roadmap\", which is the closest the public sources come to a concrete axis list. This page follows that axis set rather than inventing new ones, because every axis outside the developer-pinned thread and the community hub would be speculation rather than sourced fact.",
+        links: [STEAM_DISCUSSIONS, SCAVLAND_WIKI_HUB, PLAYERS_UA],
+      },
+      {
+        id: "vs-zero-sievert-axes",
+        type: "data-table",
+        heading: "Scavland vs Zero Sievert — concrete axes",
+        columns: [
+          { key: "axis", label: "Axis" },
+          { key: "scavland", label: "Scavland (confirmed)" },
+          { key: "zeroSievert", label: "Zero Sievert framing" },
+        ],
+        rows: [
+          {
+            axis: "Mode at launch",
+            scavland: "Single-player; co-op planned in future updates (Steam store AppID 3373500)",
+            zeroSievert: "Separate post-apocalyptic extraction survival title; treat buy-side framing from the pinned Steam Discussions thread only",
+          },
+          {
+            axis: "Weapons & attachments",
+            scavland: "25+ firearms and melee tools with 300+ attachments (Steam store AppID 3373500)",
+            zeroSievert: "Separate arsenal system; this site does not publish per-weapon counts or named attachment lists",
+          },
+          {
+            axis: "Factions & reputation",
+            scavland: "10 factions with dynamic reputation driving traders, contracts, and quest gates (Steam store AppID 3373500)",
+            zeroSievert: "Separate faction framing; this site does not publish per-faction counts or reputation mechanics",
+          },
+          {
+            axis: "World structure",
+            scavland: "Handcrafted open world layered with procedural underground bunkers (Steam store AppID 3373500)",
+            zeroSievert: "Separate world-design framing; this site does not assert procedural or handcrafted claims for Zero Sievert",
+          },
+          {
+            axis: "Named hazard",
+            scavland: "Mist anomaly as a named weather hazard (community hub analysis, scavland.wiki)",
+            zeroSievert: "Separate hazard framing; this site does not publish a named-hazard list for Zero Sievert",
+          },
+          {
+            axis: "Co-op roadmap",
+            scavland: "Cooperative multiplayer listed as planned on the Steam store page; activation date not announced as of 2026-09-04",
+            zeroSievert: "Separate co-op framing; this site does not publish a co-op status for Zero Sievert",
+          },
+          {
+            axis: "Early Access window",
+            scavland: "Steam Early Access launch on Sep 4, 2026 (Steam store AppID 3373500)",
+            zeroSievert: "Outside the scope of this site; this site does not publish release dates for Zero Sievert",
+          },
+        ],
+      },
+      {
+        id: "vs-zero-sievert-buyer",
+        type: "prose",
+        heading: "Buy Recommendation for a Zero Sievert Owner",
+        body:
+          "For a Zero Sievert owner asking whether Scavland is different enough to be worth buying, the honest answer is built only on Scavland-side confirmed facts. Scavland launches as a single-player Act I Early Access build on Sep 4, 2026, with a 25+ weapon and 300+ attachment arsenal, a 10-faction dynamic reputation layer, the Mist anomaly as a named weather hazard, a handcrafted open world layered with procedural underground bunkers, and a planned cooperative multiplayer roadmap that the developer has flagged for future updates rather than enabled at launch.\n\nThe axes where Scavland differs in concrete, sourceable terms are: attachment depth (300+ attachments versus a separate arsenal system), faction reputation (10 factions with dynamic standing versus a separate faction framing), the Mist anomaly as a named hazard (versus a separate weather framing), world structure (handcrafted overworld plus procedural bunkers, both confirmed on the Steam store page), and the co-op roadmap (planned and listed on the store, activation date not announced as of 2026-09-04). Where the source set runs out — per-weapon counts, per-faction identities, exact procedural bunker mechanics, exact Mist behaviour — this site stops asserting facts rather than filling the gap with speculation.\n\nPractical buy signal: if a single-player Act I Early Access survival RPG with a deep attachment system, a 10-faction reputation layer, and a planned co-op roadmap fits what you want from a next title, and you are willing to wait for the planned cooperative update rather than expecting it on day one, Scavland is the buy that matches the developer-pinned comparison thread. If you specifically want cooperative multiplayer at launch, or a finished 1.0 release rather than an Act I Early Access build, this site does not recommend Scavland on those axes because they are not yet true as of 2026-09-04.",
+        links: [STEAM_STORE, STEAM_DISCUSSIONS, SCAVLAND_WIKI_HUB],
+      },
+      {
+        id: "vs-zero-sievert-boundary",
+        type: "callout",
+        tone: "caution",
+        title: "Comparison scope — Scavland-side facts only",
+        body:
+          "This page asserts only Scavland-side facts as confirmed. Scavland-vs-Zero-Sievert mechanical details beyond the axes above (per-weapon counts, per-faction identities, exact Mist behaviour, exact procedural bunker mechanics, named questlines, full co-op activation date) are not announced as of 2026-09-04 in the public sources listed for this task, and this site does not publish them as fact. Track any update on the Steam store page for AppID 3373500 and the Steam Community hub news feed.",
+      },
+    ],
+    faqIds: [
+      "vs-zero-sievert-clone",
+      "vs-zero-sievert-attachments",
+      "vs-zero-sievert-factions",
+      "vs-zero-sievert-mist",
+      "vs-zero-sievert-buy",
+    ],
+    relatedPageIds: ["release-date", "factions", "weapons-attachments"],
+    schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
+    sourceStatus: "official",
+    lastReviewed: "2026-09-05",
   },
 
 ];

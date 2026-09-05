@@ -710,4 +710,112 @@ export const faqItems: FAQItem[] = [
     schemaEligible: true,
     sourceStatus: "official",
   },
+
+  // ============================================================
+  // Death and recovery FAQs (5)
+  // ============================================================
+  {
+    id: "death-penalty",
+    question: "What does dying cost in Scavland?",
+    answer:
+      "Dying in Scavland drops the backpack you were carrying as a lootable container at the death location, and a beacon marker points the player back to it for a recovery expedition. The exact magnitude of the death penalty — gear-loss tiers, container durability loss, stamina or condition penalties, and whether quest or faction progress is rolled back — is not announced as of 2026-09-04. Treat the dropped backpack as the spine of the recovery loop and confirm any further mechanic in-game before relying on it for a build.",
+    pageIds: ["death-and-recovery"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "death-backpack",
+    question: "Does Scavland drop your backpack on death?",
+    answer:
+      "Yes. The community-published death-and-recovery guide on scavland.wiki and the public Steam Discussions thread on the same question both describe a dropped-backpack mechanic: the gear you were carrying stays in the world as a lootable container at the death location, and the player can return for it on a recovery expedition. The exact backpack decay timer, the exact loot decay rules, and whether enemy NPCs interact with the dropped bag are not announced as of 2026-09-04.",
+    pageIds: ["death-and-recovery"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "death-beacon",
+    question: "How does the death beacon work in Scavland?",
+    answer:
+      "The death beacon is the in-world marker that points back to where the dropped backpack landed. The exact beacon UI (map pin, on-screen arrow, distance readout, decay timer) is not announced as of 2026-09-04. Treat the beacon marker as the timer for the recovery window: read distance and direction at the start of the run, decide the recovery loadout before leaving the safe zone, and avoid fast-traveling straight back into the danger zone with a full ammo budget.",
+    pageIds: ["death-and-recovery"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "death-permadeath",
+    question: "Is Scavland a permadeath game?",
+    answer:
+      "Permadeath is not listed as a feature on the Steam store page for Scavland AppID 3373500. The hardcore framing on the store covers scarce ammo, jamming weapons, lethal mutants, and hostile survivors, but the store does not promise that a death deletes the save or wipes the run. The exact death-penalty magnitude, any permadeath or hardcore-exclusive save mode, and the exact list of difficulty options are not announced as of 2026-09-04; check the Steam store page and the Steam Community hub news feed for any change.",
+    pageIds: ["death-and-recovery"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "death-difficulty",
+    question: "Does Scavland have a difficulty toggle?",
+    answer:
+      "A difficulty toggle for Scavland (Easy / Normal / Hardcore / Survival or similar) is not announced as of 2026-09-04. The Steam store page describes the launch build as hardcore top-down pixel art survival RPG without publishing a difficulty list, and the planned Early Access release on Sep 4, 2026 is what determines the difficulty framing at launch rather than a player-selected setting. Any future difficulty options would surface on the Steam store page for AppID 3373500 and the Steam Community hub news feed.",
+    pageIds: ["death-and-recovery"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+
+  // ============================================================
+  // Scavland vs Zero Sievert FAQs (5)
+  // ============================================================
+  {
+    id: "vs-zero-sievert-clone",
+    question: "Is Scavland a clone of Zero Sievert?",
+    answer:
+      "Scavland and Zero Sievert are separate post-apocalyptic extraction survival titles, not the same game. The comparison question is explicit enough that the developer pinned a Steam Discussions thread titled \"Scavland vs Zero Sievert\" on 2026-08-31. Scavland launches as a single-player Act I Early Access build on Sep 4, 2026 with a 25+ weapon and 300+ attachment arsenal, a 10-faction reputation layer, the Mist anomaly as a named weather hazard, a handcrafted overworld plus procedural underground bunkers, and a planned cooperative multiplayer roadmap. Only Scavland-side facts are asserted as confirmed on this site.",
+    pageIds: ["vs-zero-sievert"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "vs-zero-sievert-attachments",
+    question: "How do Scavland's attachments compare to Zero Sievert's?",
+    answer:
+      "The Steam store page for Scavland AppID 3373500 confirms 25+ firearms and melee tools with 300+ attachments, which is the only attachment-count figure this site publishes as confirmed. The community hub analysis on scavland.wiki lists attachment depth as one of the 7 core axes of the Scavland vs Zero Sievert comparison. Per-weapon slot diagrams, named attachment families, and per-attachment stat deltas are not announced as of 2026-09-04. This site does not publish per-weapon counts or named attachment lists for Zero Sievert.",
+    pageIds: ["vs-zero-sievert"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "vs-zero-sievert-factions",
+    question: "How do Scavland's factions differ from Zero Sievert's?",
+    answer:
+      "Scavland features 10 factions with a dynamic reputation system that drives traders, contracts, and side quest gates, per the Steam store page for AppID 3373500. Zero Sievert has a separate faction framing that this site does not publish, because the developer-pinned comparison thread and the community hub analysis both frame factions as one of the 7 core axes without listing per-faction counts or reputation mechanics for Zero Sievert. Specific Scavland faction identities and rival pairs are not announced as of 2026-09-04.",
+    pageIds: ["vs-zero-sievert"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "vs-zero-sievert-mist",
+    question: "What is the Mist anomaly in Scavland?",
+    answer:
+      "The Mist is a named weather hazard in Scavland, listed as one of the 7 core axes of the Scavland vs Zero Sievert comparison on the community hub at scavland.wiki. The exact Mist behaviour (visibility penalty, aggression shift, anomaly spawn rules, exact decay timer) is not announced as of 2026-09-04 in the public sources listed for this task, and this site does not publish per-axis detail beyond confirming it as a named hazard. Track any update on the Steam store page for AppID 3373500 and the Steam Community hub news feed.",
+    pageIds: ["vs-zero-sievert"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "vs-zero-sievert-buy",
+    question: "Should I buy Scavland if I already own Zero Sievert?",
+    answer:
+      "If you want a single-player Act I Early Access survival RPG with a deep attachment system (25+ weapons, 300+ attachments), a 10-faction dynamic reputation layer, the Mist anomaly as a named weather hazard, a handcrafted overworld layered with procedural underground bunkers, and you are willing to wait for the planned cooperative multiplayer roadmap rather than expecting it on day one, Scavland matches what the developer-pinned comparison thread and the Steam store page describe as the buy signal. If you specifically want cooperative multiplayer at launch or a finished 1.0 release rather than an Act I Early Access build, this site does not recommend Scavland on those axes because they are not yet true as of 2026-09-04.",
+    pageIds: ["vs-zero-sievert"],
+    category: "site",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
 ];

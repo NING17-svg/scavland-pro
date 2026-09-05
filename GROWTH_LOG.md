@@ -6,6 +6,15 @@ Record every growth-relevant edit here. Keep entries short, factual, and useful 
 
 ## Change Log
 
+### 2026-09-05 - Death & recovery and Scavland vs Zero Sievert
+
+- Task: Add `/death-and-recovery` covering what a death costs in the Act I Early Access build, the dropped-backpack mechanic, the beacon marker, and recovery-expedition prep under scarce ammo, with explicit unconfirmed markers on death-penalty magnitude, permadeath, and difficulty toggle. Add `/vs-zero-sievert` answering the developer-pinned comparison thread on Steam Discussions with the 7 concrete axes (weapons/attachments, factions, Mist anomaly, world structure, co-op roadmap, mode at launch, Early Access window), asserting only Scavland-side facts as confirmed.
+- Files changed: `src/data/pages/scavland-pages.ts` (two new `PageContent` entries plus new source-link constants), `src/data/faq.ts` (10 new FAQ items: 5 death-and-recovery, 5 vs-zero-sievert), `src/data/pages/home.ts` (entity-grid and relatedPageIds), `CONTENT_INDEX.md` (two new rows).
+- URLs affected: New `/death-and-recovery` (guide, pageType `guide`) and new `/vs-zero-sievert` (comparison, pageType `comparison`). No existing URLs changed.
+- SEO/GEO changed: Two new pages carry `Article`, `BreadcrumbList`, and `FAQPage` schema, with hero CTAs cross-linking to combat, weapons, factions, and release-date hubs. Each page opens with an explicit "facts boundary" callout covering unconfirmed details.
+- Source baseline: Public sources only — Steam store AppID 3373500, Steam Discussions (developer-pinned comparison thread and Death? thread), scavland.wiki hub and death-and-recovery guide, players.com.ua launch coverage. No factual claims beyond those public sources.
+- Verification: `npm run verify` (typecheck, lint, template/content/indexnow validation, build, rendered-SEO) passes locally.
+
 ### 2026-09-04 - Adsterra integration (scavland-pro launch)
 
 - Task: Populate the six fixed Adsterra unit values (Native Banner, 728x90, 468x60, 320x50, 160x600, Smartlink) after launch.
