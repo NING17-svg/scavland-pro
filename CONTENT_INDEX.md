@@ -21,7 +21,7 @@ hreflang, sitemap, and route-manifest validation.
 | `/contact` | `src/data/pages/site-pages.ts` | Utility | contact Template Game Guide | Corrections and source updates | About | Trust | Contact channel pending. |
 | `/privacy-policy` | `src/data/pages/site-pages.ts` | Legal | privacy policy | Privacy and analytics | Terms | Trust | GA4 only when configured. |
 | `/terms` | `src/data/pages/site-pages.ts` | Legal | terms of use | Site use expectations | Privacy Policy | Trust | Keep unofficial disclaimer clear. |
-| `/death-and-recovery` | `src/data/pages/scavland-pages.ts` | Guide | Scavland death and loot recovery | Understand what a death costs and how to get gear back | Combat / Weapons | Supporting hub | Covers dropped-backpack, beacon marker, recovery expedition, and explicit unconfirmed markers on permadeath and difficulty. |
+| `/death-and-recovery` | `src/data/pages/scavland-pages.ts` | Guide | Scavland death and loot recovery | Understand what a death costs after v0.5.169 and how to get gear back | Updates / Weapons | Supporting hub | Absorbs the v0.5.169 day-one mechanic (keep equipment on death, only some backpack items lost), Explorer mode as the new death-penalty toggle, and the v0.5.169 stamina + campfire + IFAK QoL changes. Beacon-marker decay and the exact dropped-backpack subset remain explicitly unconfirmed. |
 | `/vs-zero-sievert` | `src/data/pages/scavland-pages.ts` | Comparison | Scavland vs Zero Sievert | Decide whether Scavland is worth buying | Release / Factions | Supporting hub | Asserts only Scavland-side facts as confirmed; comparison axes follow the developer-pinned Steam Discussions thread. |
 
 ## Generated Route Families

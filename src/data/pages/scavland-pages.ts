@@ -89,9 +89,30 @@ const SCAVLAND_WIKI_HUB = {
 
 const SCAVLAND_WIKI_DEATH = {
   label: "Scavland community wiki — Death & recovery guide",
-  href: "https://scavland.wiki/guides/death-and-recovery/",
+  href: "https://scavland.wiki/guide/scavland-death-and-loot-recovery/",
   description:
     "Independent community wiki page covering Scavland death penalties, dropped backpacks, beacon markers, and safe recovery expeditions.",
+};
+
+const SCAVLAND_WIKI_UPDATES = {
+  label: "Scavland community wiki — Patch notes and updates",
+  href: "https://scavland.wiki/updates/",
+  description:
+    "Independent community wiki page that collects Scavland patch notes including v0.5.169 day-one changes and pending v0.5.121 balance work.",
+};
+
+const VGS_V05169 = {
+  label: "vgspoilers.com — Scavland v0.5.169 patch notes",
+  href: "https://vgspoilers.com/game/scavland/patches/0.5.169",
+  description:
+    "Third-party patch notes mirror of the Scavland v0.5.169 day-one build covering Explorer mode, doubled stamina, campfire healing, NPC indicator reticles, and IFAK stacking.",
+};
+
+const STEAM_PINNED = {
+  label: "Steam Discussions — \"We Hear You - Changes Are Coming\" pinned thread",
+  href: "https://steamcommunity.com/app/3373500/discussions/0/592940297913404667/",
+  description:
+    "Developer-pinned Steam Discussions thread by Lucasmml covering promised next-patch changes including custom map markers, increased camera zoom, and quest ticks.",
 };
 
 const STEAM_DISCUSSIONS = {
@@ -1271,63 +1292,71 @@ export const scavlandPages: PageContent[] = [
     url: "/death-and-recovery",
     pageType: "guide",
     presentation: { shell: "content", variant: "reading-right-rail" },
-    h1: "Scavland Death and Loot Recovery: What You Lose and How to Get It Back",
-    seoTitle: "Scavland Death and Loot Recovery: Dropped Backpacks, Beacons, Recovery Runs",
+    h1: "Scavland Death and Loot Recovery: What v0.5.169 Keeps and What You Still Lose",
+    seoTitle: "Scavland Death and Loot Recovery: v0.5.169 Death-Mechanic Change and Explorer Mode",
     metaDescription:
-      "Scavland death and loot recovery covers what death costs on a failed Zalesye run, how dropped backpacks and beacon markers work, and how to plan a safe recovery expedition under scarce ammo.",
+      "Scavland death and loot recovery after the v0.5.169 day-one patch: equipment is kept on death, only some backpack items are lost, the recovery beacon still points back to your bag, and Explorer mode is the new death-penalty toggle.",
     summary:
-      "Scavland death and loot recovery in the Act I Early Access build focuses on the dropped backpack, the beacon marker, and a follow-up recovery expedition rather than an advertised permadeath mechanic. The exact magnitude of the death penalty is not announced as of 2026-09-04, and a difficulty toggle is not announced as of 2026-09-04.",
+      "Scavland death and loot recovery was rewritten by the v0.5.169 day-one patch on Sep 5, 2026. Equipment is now kept on death — only a subset of backpack items is dropped at the death location — and a new Explorer mode lowers the death penalty further for players focused on map exploration. The dropped backpack, the beacon marker that points back to it, the home-base stash, and the respawn-at-safehouse recovery loop all remain. Permadeath is still not listed as a feature on the Steam store page for AppID 3373500.",
     hero: {
       eyebrow: "Guide",
       subtitle:
-        "What a death actually costs in Scavland Act I Early Access, how the dropped backpack and beacon marker work, and how to plan a recovery expedition under scarce ammo and jam-prone weapons.",
+        "What the v0.5.169 day-one patch changed about death, how Explorer mode sits on top of it, and how to plan a recovery expedition for the backpack items you do still lose.",
       ctas: [
-        { label: "Combat tips", href: "/combat-tips" },
+        { label: "Patch notes", href: "/updates" },
         { label: "Weapons & attachments", href: "/weapons-attachments" },
         { label: "Factions", href: "/factions" },
       ],
     },
     quickAnswer:
-      "Scavland death and loot recovery in the Act I Early Access build centers on the dropped-backpack mechanic and a beacon marker that lets the player run back for the gear, rather than an advertised permadeath. The exact magnitude of the death penalty (gear loss tiers, container durability loss, stamina or condition penalties) is not announced as of 2026-09-04, a difficulty toggle is not announced as of 2026-09-04, and permadeath is not listed as a feature on the Steam store page for AppID 3373500. Plan for recovery expeditions: bring a melee loadout for the bunker approach, conserve ammo on the way back, and treat the beacon marker as the timer for the window you have to collect the bag.",
+      "Scavland death and loot recovery in the current Early Access build (post-v0.5.169 day-one patch on Sep 5, 2026) is materially softer than the pre-patch version. Equipment is kept on death; only a subset of backpack items is dropped at the death location. The home-base stash and character progression are preserved, the player respawns at the safehouse, and a beacon marker on the overworld map points back to the dropped bag. A new Explorer mode lowers the death penalty further for players focused on map exploration. Permadeath is not listed as a feature on the Steam store page for AppID 3373500, and the exact subset of backpack items dropped on death is not yet fully disclosed by NoShadow.",
     keyFacts: [
-      { label: "Death penalty", value: "Dropped backpack + beacon marker (magnitude unconfirmed)" },
-      { label: "Permadeath", value: "Not an advertised feature on the Steam store page" },
-      { label: "Difficulty toggle", value: "Not announced as of 2026-09-04" },
-      { label: "Recovery loop", value: "Return trip from a prepared safe zone to the beacon marker" },
-      { label: "Resource pressure", value: "Scarce ammo and jam-prone weapons on recovery runs" },
+      { label: "Death mechanic", value: "Equipment kept on death; only some backpack items lost (v0.5.169)" },
+      { label: "Explorer mode", value: "Lower death penalty for exploration-focused players (v0.5.169)" },
+      { label: "Safehouse stash", value: "Preserved; player respawns at safehouse" },
+      { label: "Beacon marker", value: "Death-location beacon on the overworld map" },
+      { label: "Permadeath", value: "Not listed as a feature on the Steam store page" },
     ],
     modules: [
       {
         id: "death-and-recovery-cost",
         type: "prose",
-        heading: "What a Death Actually Costs in Scavland",
+        heading: "What a Death Costs in Scavland After the v0.5.169 Patch",
         body:
-          "Scavland is framed as a hardcore top-down pixel art survival RPG on the Steam store page, with scarce ammunition, jamming weapons, lethal mutants, and hostile survivors called out as part of the pitch. The hardcore framing means a death has to cost something, but the exact magnitude of the death penalty is not announced as of 2026-09-04. What the public sources confirm is the dropped-backpack mechanic: when a player dies, the gear they were carrying stays in the world rather than vanishing, and the recovery loop is built around going back for it.\n\nThe death-cost story therefore splits into two layers. The confirmed layer is the backpack drop and the beacon marker that points back to where the bag landed. The unconfirmed layer is everything around it: the exact gear-loss tiers, whether a container (backpack, plate carrier, helmet) loses durability on death, whether the player respawns with a starter loadout or empty-handed, whether stamina or condition penalties apply for the next run, and whether any progress (quest stage, faction standing, contract) is rolled back. These details are not announced as of 2026-09-04, and treating them as confirmed would mean inventing mechanics that the developer has not published.\n\nA frequent Steam Discussions thread titled simply \"Death?\" by user Lunos with a single reply and no visible developer answer reflects exactly this uncertainty, and is the kind of public signal that says the buyer question is live rather than answered. Use the public sources only: the Steam store page for AppID 3373500 for the hardcore pitch, the Steam Discussions index for the live question, and the community wiki's death-and-recovery guide for the community-published framing. Confirm anything beyond those in-game before relying on it for a build.",
-        links: [STEAM_STORE, STEAM_DISCUSSIONS, SCAVLAND_WIKI_DEATH],
+          "Scavland is framed as a hardcore top-down pixel art survival RPG on the Steam store page, with scarce ammunition, jamming weapons, lethal mutants, and hostile survivors called out as part of the pitch. The v0.5.169 day-one patch on Sep 5, 2026 rebalanced that hardcore framing for the death-cost side. Per the v0.5.169 patch notes mirrored on vgspoilers.com, the build keeps equipment on death rather than wiping the loadout, and only a subset of backpack items is left at the death location. The exact subset is not yet fully disclosed by NoShadow — the patch is documented in summary form rather than as a per-item exclusion list, so treat any specific \"X item type always drops\" claim as unconfirmed.\n\nThe death-cost story therefore splits into three layers. The confirmed v0.5.169 layer is that equipment is preserved on death and only some backpack items are dropped. The pre-patch layer that still applies is the dropped backpack mechanic itself, the home-base stash preservation, and the death-location beacon that points back to where the bag landed. The unconfirmed layer is the exact per-item drop rule for backpack contents, whether the dropped-backpack decay timer changed, and whether quest or faction standing is rolled back. None of these finer points are published as a per-item patch table as of 2026-09-08.\n\nUse the public sources only: the Steam store page for AppID 3373500 for the hardcore pitch and current price; the Steam Discussions index for the live death-mechanic feedback thread \"yeah this is too unforgiving\" by kseidon and the developer-pinned \"We Hear You - Changes Are Coming\" thread by Lucasmml; the community wiki's death-and-recovery guide for the dropped-backpack framing; and the v0.5.169 patch notes mirror for the post-patch mechanic. Confirm anything beyond those in-game before relying on it for a build.",
+        links: [STEAM_STORE, STEAM_DISCUSSIONS, SCAVLAND_WIKI_DEATH, VGS_V05169, STEAM_PINNED],
+      },
+      {
+        id: "death-and-recovery-explorer",
+        type: "prose",
+        heading: "Explorer Mode as the New Death-Penalty Toggle (v0.5.169)",
+        body:
+          "The v0.5.169 day-one patch introduced Explorer mode as the new lower death-penalty option for Scavland. Per the community wiki updates page summary of the v0.5.169 patch, Explorer mode delivers lower death penalties \"for players focused on map exploration.\" That framing is the closest the public sources come to a difficulty toggle — there is no separate \"Easy / Normal / Hardcore\" switch on the Steam store page, so Explorer mode functions as the death-penalty softening toggle the developer added in response to the \"Death?\" and \"yeah this is too unforgiving\" Steam Discussions threads.\n\nWhat Explorer mode is documented to do: lower the death penalty relative to the default Scavland experience. What is not documented: the exact equipment-versus-backpack split under Explorer mode, whether it changes the beacon decay timer, and whether it changes how the home-base stash or respawn behaviour works. Treat the Explorer mode label as the canonical death-penalty softening option and confirm any further mechanic in-game.\n\nWhat Explorer mode is not: it is not permadeath, it is not a hardcore-exclusive save mode, and it is not a permanent difficulty label printed on the save file. Permadeath is still not listed as a feature on the Steam store page for AppID 3373500, and the difficulty framing outside Explorer mode is whatever the Early Access build ships with.",
+        links: [VGS_V05169, SCAVLAND_WIKI_UPDATES, STEAM_DISCUSSIONS],
       },
       {
         id: "death-and-recovery-backpack",
         type: "prose",
-        heading: "The Dropped-Backpack Mechanic",
+        heading: "The Dropped-Backpack Mechanic and What v0.5.169 Still Drops",
         body:
-          "The dropped-backpack mechanic is the single most important fact to internalise before a deep Zalesye or high-radiation run. On death, the gear you were carrying stays in the world as a lootable container at the spot where you died. That backpack holds the weapons, attachments, ammo, meds, and quest items you walked in with, and it does not despawn instantly. The exact backpack decay timer, the exact loot decay rules, and whether enemy NPCs interact with the dropped bag are not announced as of 2026-09-04; treat the bag as recoverable for at least the length of a single recovery expedition and do not assume it survives indefinitely.\n\nPractical reading: if you go into a bunker with your best loadout and die, the run is not over. You can return to the bag, recover most of what you walked in with, and resume the run from a settlement or safe zone. The cost is time, ammo spent on the way back, and the risk that the recovery expedition itself ends in another death, in which case the second backpack stacks on top of the first. Plan recovery runs as their own engagement, not as a free second chance.",
-        links: [SCAVLAND_WIKI_DEATH, STEAM_STORE],
+          "The dropped-backpack mechanic is still the spine of the recovery loop after v0.5.169. On death, a subset of backpack items stays in the world as a lootable container at the spot where you died. That container still holds some of the weapons, attachments, ammo, meds, and quest items you walked in with, and it does not despawn instantly. The exact backpack decay timer, the exact loot decay rules, and whether enemy NPCs interact with the dropped bag are not announced as of 2026-09-08; treat the bag as recoverable for at least the length of a single recovery expedition and do not assume it survives indefinitely.\n\nWhat v0.5.169 changed about the backpack: the patch explicitly moved from the pre-patch framing of \"fully dropped backpack + beacon recovery\" to the post-patch framing of \"keep equipment on death, except some backpack items.\" That means the equipment slot itself (weapons, armor, helmet, plate carrier, and any equipped attachment) survives the death by default, and only items inside the backpack slot remain at risk of dropping. The exact items inside the backpack that drop is the part of the mechanic the developer has not published as a per-item table.\n\nPractical reading: if you go into a bunker with your best loadout and die, the run is not over, and the recovery cost is materially lower than it was before v0.5.169. You can return to the bag, recover the items that did drop, and resume the run from the safehouse. The remaining cost is the ammo and meds you spend on the way back, and the risk that the recovery expedition itself ends in another death, in which case the second backpack stacks on top of the first. Plan recovery runs as their own engagement, not as a free do-over.",
+        links: [SCAVLAND_WIKI_DEATH, VGS_V05169],
       },
       {
         id: "death-and-recovery-beacon",
         type: "prose",
         heading: "Beacon Markers and the Recovery Window",
         body:
-          "A beacon marker is the in-world pointer that shows where the dropped backpack landed. The exact beacon marker UI (map pin, on-screen arrow, distance readout, decay timer) is not announced as of 2026-09-04, but the community-published framing on the scavland.wiki death-and-recovery guide treats the beacon as the spine of the recovery loop. Practically, the beacon is the timer: it tells you how long the window is open before the bag is no longer recoverable in the state you expect.\n\nHow to use the beacon well: read the marker's distance and rough direction the moment the run starts, not after you have already wasted a settlement visit. Decide the recovery loadout before you leave the safe zone — a melee weapon to keep noise low, one ranged sidearm for emergencies, and just enough ammo and meds to survive the second approach. Avoid fast-travel back into the danger zone: a recovery expedition is a fresh engagement with its own ammo budget, and overcommitting ammo on the way back is the most common way a recoverable death becomes a permanent loss.",
-        links: [SCAVLAND_WIKI_DEATH, SCAVLAND_WIKI_HUB],
+          "A beacon marker is the in-world pointer that shows where the dropped backpack landed. On respawn at your safehouse, a death-location beacon appears on the overworld map for recovery reference — that framing comes from the community wiki death-and-recovery guide, which treats the beacon as the spine of the recovery loop. The exact beacon marker UI (map pin, on-screen arrow, distance readout, decay timer) is not announced as of 2026-09-08, but the practical role of the beacon is unchanged: it is the timer for the window you have to collect the bag.\n\nHow to use the beacon well: read the marker's distance and rough direction the moment the run starts, not after you have already wasted a settlement visit. Decide the recovery loadout before you leave the safe zone — a melee weapon to keep noise low, one ranged sidearm for emergencies, and just enough ammo and meds to survive the second approach. Avoid fast-travel back into the danger zone: a recovery expedition is a fresh engagement with its own ammo budget, and overcommitting ammo on the way back is the most common way a recoverable death becomes a permanent loss.\n\nA small but real v0.5.169 quality-of-life change that affects the recovery window: the patch enabled autosave and added quest-item markers in the inventory. Autosave reduces the cost of a death because progress is preserved more granularly, and the inventory quest-item marker makes the recovery expedition easier because you can see at a glance what is still worth retrieving from the dropped bag.",
+        links: [SCAVLAND_WIKI_DEATH, VGS_V05169],
       },
       {
         id: "death-and-recovery-prep",
         type: "prose",
-        heading: "How to Prepare a Recovery Expedition Under Scarce Ammo",
+        heading: "How to Prepare a Recovery Expedition Under v0.5.169",
         body:
-          "Recovery expeditions are run under the same scarce-ammo, jam-prone-weapon pressure as the original Zalesye run, which is why preparation matters more than firepower. The combat verbs that the Steam store names — firearms, melee, stealth, and suppression — apply to the recovery trip exactly as they apply to the first push. Stealth the approach, melee the close encounters, and reserve firearms for the suppression pin that lets you grab the bag and extract. The full attachment options that shape recoil and ammo capacity are on the Scavland weapons page, and a controllable-recoil build is the right tool for a recovery expedition that may need to suppress a bunker entrance.\n\nLoadout rules for a recovery expedition:\n\n- Primary: a melee tool with enough reach for bunker corridors; this keeps the muzzle-flash signature low and saves the rifle ammo for the extraction.\n- Secondary: a controllable-recoil sidearm with one magazine for emergencies; do not walk in with a primary magazine budget.\n- Meds: at least one healing item and one stamina item; the exact stack sizes are not announced as of 2026-09-04, so bring what you can spare without breaking the settlement loadout.\n- Backup plan: know the nearest settlement or safe zone before you leave, so a second death does not strand you across the map.\n\nThe exact ammo economy, the exact attachment slots that affect jamming, and the exact jamming failure rules are not announced as of 2026-09-04. Treat every recovery expedition as a real engagement, not a free do-over.",
-        links: [STEAM_STORE, SCAVLAND_WIKI_DEATH],
+          "Recovery expeditions in the v0.5.169 build still run under scarce-ammo, jam-prone-weapon pressure, which is why preparation matters more than firepower. The combat verbs the Steam store names — firearms, melee, stealth, and suppression — apply to the recovery trip exactly as they apply to the first push. Stealth the approach, melee the close encounters, and reserve firearms for the suppression pin that lets you grab the bag and extract. The full attachment options that shape recoil and ammo capacity are on the Scavland weapons page, and a controllable-recoil build is the right tool for a recovery expedition that may need to suppress a bunker entrance.\n\nTwo v0.5.169 changes directly affect the recovery expedition. First, player stamina was doubled in v0.5.169, which makes the round-trip to the beacon marker much more forgiving on longer runs and reduces the chance the second death comes from running out of stamina in the open. Second, lit campfires now heal you (when energy and hydration are good), so you can stage a campfire at the midpoint of a long recovery route and regenerate between fights instead of burning meds. Pair the doubled stamina with campfire staging for the cleanest recovery expeditions.\n\nLoadout rules for a recovery expedition:\n\n- Primary: a melee tool with enough reach for bunker corridors; this keeps the muzzle-flash signature low and saves the rifle ammo for the extraction.\n- Secondary: a controllable-recoil sidearm with one magazine for emergencies; do not walk in with a primary magazine budget.\n- Meds: at least one healing item and one stamina item; v0.5.169 added IFAK stacking up to 3 and made Alexei stock more IFAKs, so a stack of three is the realistic expedition budget.\n- Backup plan: know the nearest settlement or safe zone before you leave, so a second death does not strand you across the map.\n\nThe exact ammo economy, the exact attachment slots that affect jamming, and the exact jamming failure rules are not announced as of 2026-09-08. Treat every recovery expedition as a real engagement, not a free do-over.",
+        links: [STEAM_STORE, SCAVLAND_WIKI_DEATH, VGS_V05169],
       },
       {
         id: "death-and-recovery-permadeath",
@@ -1335,7 +1364,7 @@ export const scavlandPages: PageContent[] = [
         tone: "caution",
         title: "Permadeath and difficulty toggle — explicitly unconfirmed",
         body:
-          "Permadeath is not listed as a feature on the Steam store page for Scavland AppID 3373500. The hardcore framing covers scarce ammo, jamming weapons, lethal mutants, and hostile survivors, but the store does not promise that a death deletes the save or wipes the run. A difficulty toggle (Easy / Normal / Hardcore / Survival) is not announced as of 2026-09-04, so the difficulty framing you experience is whatever the Early Access build ships with rather than a chosen setting.\n\nUnconfirmed for the Act I Early Access build as of 2026-09-04: exact death-penalty magnitude, exact gear-loss tiers, exact backpack decay timer, exact beacon marker decay, exact difficulty toggle list, and any permadeath or hardcore-exclusive save mode. Track any change on the Steam store page for AppID 3373500 and the Steam Community hub news feed.",
+          "Permadeath is not listed as a feature on the Steam store page for Scavland AppID 3373500. The hardcore framing covers scarce ammo, jamming weapons, lethal mutants, and hostile survivors, but the store does not promise that a death deletes the save or wipes the run. Explorer mode is the documented v0.5.169 softening toggle, not a permadeath toggle. A separate Easy / Normal / Hardcore / Survival difficulty list is not announced as of 2026-09-08.\n\nUnconfirmed for the current Early Access build as of 2026-09-08: exact per-item subset of backpack contents dropped on death, exact backpack decay timer post-v0.5.169, exact beacon marker decay, exact Explorer mode equipment-versus-backpack split, and any permadeath or hardcore-exclusive save mode. Track any change on the Steam store page for AppID 3373500 and the Steam Community hub news feed.",
       },
     ],
     faqIds: [
@@ -1344,11 +1373,12 @@ export const scavlandPages: PageContent[] = [
       "death-beacon",
       "death-permadeath",
       "death-difficulty",
+      "death-explorer-mode",
     ],
-    relatedPageIds: ["combat-tips", "weapons-attachments", "factions"],
+    relatedPageIds: ["updates", "weapons-attachments", "factions"],
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "official",
-    lastReviewed: "2026-09-05",
+    lastReviewed: "2026-09-08",
   },
 
   {

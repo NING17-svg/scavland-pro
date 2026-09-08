@@ -6,6 +6,15 @@ Record every growth-relevant edit here. Keep entries short, factual, and useful 
 
 ## Change Log
 
+### 2026-09-08 - Death & recovery absorbed v0.5.169 day-one changes
+
+- Task: Refresh `/death-and-recovery` so the page reflects the post-v0.5.169 day-one build instead of the pre-patch \"fully dropped backpack + beacon recovery\" framing.
+- Files changed: `src/data/pages/scavland-pages.ts` (`death-and-recovery` page body, modules, hero CTAs, relatedPageIds, lastReviewed; two new source-link constants `SCAVLAND_WIKI_UPDATES`, `VGS_V05169`, `STEAM_PINNED`; corrected `SCAVLAND_WIKI_DEATH` href to the `/guide/scavland-death-and-loot-recovery/` slug), `src/data/faq.ts` (5 existing death-and-recovery FAQs rewritten for v0.5.169 + 1 new `death-explorer-mode` FAQ), `CONTENT_INDEX.md` (`/death-and-recovery` row updated).
+- URLs affected: Existing `/death-and-recovery` URL retained; no new routes. CTA retargeted to `/updates` for the patch-notes path.
+- SEO/GEO changed: Page now asserts the post-v0.5.169 mechanic (equipment kept on death; only some backpack items lost) as confirmed, Explorer mode (v0.5.169) as the new death-penalty toggle, and the v0.5.169 stamina / campfire / IFAK QoL trio as confirmed. Per-item backpack drop subset and beacon decay remain explicitly unconfirmed in the fact-boundary callout.
+- Source baseline: v0.5.169 patch notes mirror on vgspoilers.com, Steam Discussions developer-pinned \"We Hear You - Changes Are Coming\" thread by Lucasmml, scavland.wiki death-and-recovery guide, scavland.wiki updates page. No factual claims beyond those public sources.
+- Verification: `npm run verify` pending.
+
 ### 2026-09-05 - Death & recovery and Scavland vs Zero Sievert
 
 - Task: Add `/death-and-recovery` covering what a death costs in the Act I Early Access build, the dropped-backpack mechanic, the beacon marker, and recovery-expedition prep under scarce ammo, with explicit unconfirmed markers on death-penalty magnitude, permadeath, and difficulty toggle. Add `/vs-zero-sievert` answering the developer-pinned comparison thread on Steam Discussions with the 7 concrete axes (weapons/attachments, factions, Mist anomaly, world structure, co-op roadmap, mode at launch, Early Access window), asserting only Scavland-side facts as confirmed.

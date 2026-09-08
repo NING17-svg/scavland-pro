@@ -712,13 +712,13 @@ export const faqItems: FAQItem[] = [
   },
 
   // ============================================================
-  // Death and recovery FAQs (5)
+  // Death and recovery FAQs (6)
   // ============================================================
   {
     id: "death-penalty",
-    question: "What does dying cost in Scavland?",
+    question: "What does dying cost in Scavland after v0.5.169?",
     answer:
-      "Dying in Scavland drops the backpack you were carrying as a lootable container at the death location, and a beacon marker points the player back to it for a recovery expedition. The exact magnitude of the death penalty — gear-loss tiers, container durability loss, stamina or condition penalties, and whether quest or faction progress is rolled back — is not announced as of 2026-09-04. Treat the dropped backpack as the spine of the recovery loop and confirm any further mechanic in-game before relying on it for a build.",
+      "After the v0.5.169 day-one patch on Sep 5, 2026, Scavland keeps equipment on death and only drops a subset of backpack items at the death location. The home-base stash and character progression are preserved, the player respawns at the safehouse, and a beacon marker on the overworld map points back to the dropped bag for a recovery expedition. The exact subset of backpack items dropped on death is not yet fully disclosed by NoShadow, and gear-loss tiers, durability loss on containers, and stamina or condition penalties remain unannounced as of 2026-09-08.",
     pageIds: ["death-and-recovery"],
     category: "gameplay",
     schemaEligible: true,
@@ -728,7 +728,7 @@ export const faqItems: FAQItem[] = [
     id: "death-backpack",
     question: "Does Scavland drop your backpack on death?",
     answer:
-      "Yes. The community-published death-and-recovery guide on scavland.wiki and the public Steam Discussions thread on the same question both describe a dropped-backpack mechanic: the gear you were carrying stays in the world as a lootable container at the death location, and the player can return for it on a recovery expedition. The exact backpack decay timer, the exact loot decay rules, and whether enemy NPCs interact with the dropped bag are not announced as of 2026-09-04.",
+      "Yes, but only the contents. After the v0.5.169 day-one patch, equipment is kept on death and only a subset of backpack items is left at the death location as a lootable container. The community-published death-and-recovery guide on scavland.wiki and the v0.5.169 patch notes mirror on vgspoilers.com both describe this: gear stays in the world as a lootable container, and the player can return for it on a recovery expedition. The exact backpack decay timer, the exact loot decay rules, and whether enemy NPCs interact with the dropped bag are not announced as of 2026-09-08.",
     pageIds: ["death-and-recovery"],
     category: "gameplay",
     schemaEligible: true,
@@ -738,7 +738,7 @@ export const faqItems: FAQItem[] = [
     id: "death-beacon",
     question: "How does the death beacon work in Scavland?",
     answer:
-      "The death beacon is the in-world marker that points back to where the dropped backpack landed. The exact beacon UI (map pin, on-screen arrow, distance readout, decay timer) is not announced as of 2026-09-04. Treat the beacon marker as the timer for the recovery window: read distance and direction at the start of the run, decide the recovery loadout before leaving the safe zone, and avoid fast-traveling straight back into the danger zone with a full ammo budget.",
+      "On respawn at your safehouse, a death-location beacon appears on the overworld map to point back to the dropped backpack. The exact beacon UI (map pin, on-screen arrow, distance readout, decay timer) is not announced as of 2026-09-08. Treat the beacon marker as the timer for the recovery window: read distance and direction at the start of the run, decide the recovery loadout before leaving the safe zone, and avoid fast-traveling straight back into the danger zone with a full ammo budget.",
     pageIds: ["death-and-recovery"],
     category: "gameplay",
     schemaEligible: true,
@@ -748,7 +748,7 @@ export const faqItems: FAQItem[] = [
     id: "death-permadeath",
     question: "Is Scavland a permadeath game?",
     answer:
-      "Permadeath is not listed as a feature on the Steam store page for Scavland AppID 3373500. The hardcore framing on the store covers scarce ammo, jamming weapons, lethal mutants, and hostile survivors, but the store does not promise that a death deletes the save or wipes the run. The exact death-penalty magnitude, any permadeath or hardcore-exclusive save mode, and the exact list of difficulty options are not announced as of 2026-09-04; check the Steam store page and the Steam Community hub news feed for any change.",
+      "Permadeath is not listed as a feature on the Steam store page for Scavland AppID 3373500. The hardcore framing on the store covers scarce ammo, jamming weapons, lethal mutants, and hostile survivors, but the store does not promise that a death deletes the save or wipes the run. The v0.5.169 day-one patch softened the death cost by keeping equipment on death and adding Explorer mode as the lower death-penalty option, both of which move Scavland further from a permadeath framing. Any permadeath or hardcore-exclusive save mode is not announced as of 2026-09-08.",
     pageIds: ["death-and-recovery"],
     category: "gameplay",
     schemaEligible: true,
@@ -758,7 +758,17 @@ export const faqItems: FAQItem[] = [
     id: "death-difficulty",
     question: "Does Scavland have a difficulty toggle?",
     answer:
-      "A difficulty toggle for Scavland (Easy / Normal / Hardcore / Survival or similar) is not announced as of 2026-09-04. The Steam store page describes the launch build as hardcore top-down pixel art survival RPG without publishing a difficulty list, and the planned Early Access release on Sep 4, 2026 is what determines the difficulty framing at launch rather than a player-selected setting. Any future difficulty options would surface on the Steam store page for AppID 3373500 and the Steam Community hub news feed.",
+      "A traditional difficulty toggle for Scavland (Easy / Normal / Hardcore / Survival or similar) is not announced as of 2026-09-08. The v0.5.169 day-one patch introduced Explorer mode as the documented lower death-penalty option, which functions as a death-cost softening toggle for players focused on map exploration. The Steam store page describes the launch build as hardcore top-down pixel art survival RPG without publishing a separate difficulty list; track any future difficulty options on the Steam store page for AppID 3373500 and the Steam Community hub news feed.",
+    pageIds: ["death-and-recovery"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "death-explorer-mode",
+    question: "What is Explorer mode in Scavland?",
+    answer:
+      "Explorer mode is the new lower death-penalty option added by the v0.5.169 day-one patch on Sep 5, 2026. The community wiki updates page describes Explorer mode as delivering lower death penalties \"for players focused on map exploration.\" Explorer mode is the documented death-penalty softening toggle NoShadow added in response to Steam Discussions feedback; the exact Explorer mode equipment-versus-backpack split and any beacon decay changes are not yet fully disclosed as of 2026-09-08. Permadeath is not listed as a feature on the Steam store page for AppID 3373500, so Explorer mode is a softer toggle, not a harder one.",
     pageIds: ["death-and-recovery"],
     category: "gameplay",
     schemaEligible: true,

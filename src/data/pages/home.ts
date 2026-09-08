@@ -154,7 +154,7 @@ export const homePage: PageContent = {
         },
         {
           title: "Death and recovery",
-          summary: "What a death costs in Scavland Act I Early Access, plus dropped-backpack and beacon-marker recovery runs.",
+          summary: "What the v0.5.169 day-one patch changed about death (keep equipment on death, only some backpack items lost), plus Explorer mode and beacon-marker recovery.",
           href: "/death-and-recovery",
           badge: "Guide",
         },
