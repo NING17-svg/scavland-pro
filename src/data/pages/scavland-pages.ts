@@ -94,6 +94,13 @@ const SCAVLAND_WIKI_DEATH = {
     "Independent community wiki page covering Scavland death penalties, dropped backpacks, beacon markers, and safe recovery expeditions.",
 };
 
+const SCAVLAND_WIKI_FACTIONS = {
+  label: "Scavland community wiki — Factions guide",
+  href: "https://scavland.wiki/factions/",
+  description:
+    "Independent community wiki page covering Scavland Act I factions, named traders, locations, reputation gates, and barter goods.",
+};
+
 const SCAVLAND_WIKI_UPDATES = {
   label: "Scavland community wiki — Patch notes and updates",
   href: "https://scavland.wiki/updates/",
@@ -848,54 +855,70 @@ export const scavlandPages: PageContent[] = [
     url: "/updates",
     pageType: "status",
     presentation: { shell: "content", variant: "reading-right-rail" },
-    h1: "Scavland Updates: Patch Notes and Early Access Roadmap",
-    seoTitle: "Scavland Updates: Latest Patch Notes and Early Access Roadmap",
+    h1: "Scavland Updates: v0.5.169 Patch Notes and Early Access Roadmap",
+    seoTitle: "Scavland Updates: v0.5.169 Patch Notes and Early Access Roadmap",
     metaDescription:
-      "Scavland updates land throughout Steam Early Access. Track the latest patch notes, planned co-op, and where to follow official roadmap announcements.",
+      "Scavland updates: v0.5.169 day-one patch (Explorer mode, doubled stamina, campfire healing, IFAK stacking), pending v0.5.121 balance work, and the developer-pinned We Hear You thread signalling next-patch changes.",
     summary:
-      "Scavland updates land throughout Steam Early Access. The Steam Community hub is the canonical source for each Scavland update entry, and NoShadow and UNSUBSCRIBE have not yet published a public roadmap beyond the launch window. Cooperative multiplayer is listed as a planned future update on the Steam store page.",
+      "Scavland v0.5.169 shipped on Sep 5, 2026 as the Early Access day-one patch and added Explorer mode, doubled player stamina, campfire healing, NPC indicator reticles, and stacked IFAKs up to 3, alongside the softened death-penalty (keep equipment, drop only some backpack items) and a reduced gun-explosion threshold. The community-tracked pending v0.5.121 build is described in wiki updates as the next balance patch; the developer-pinned Steam Discussions thread by Lucasmml titled We Hear You - Changes Are Coming is the canonical source for the next change list. A versioned public roadmap beyond the launch window is not announced as of 2026-09-08.",
     hero: {
       eyebrow: "Status",
       subtitle:
-        "How to follow Scavland updates, where to find canonical patch notes, and the current Early Access roadmap status.",
+        "What v0.5.169 changed on day one, what v0.5.121 is queued to change, and where the We Hear You developer-pinned thread points next.",
       ctas: [
         { label: "Release date", href: "/release-date" },
         { label: "Multiplayer status", href: "/multiplayer-coop" },
-        { label: "Reviews", href: "/reviews" },
+        { label: "Death and recovery", href: "/death-and-recovery" },
       ],
     },
     quickAnswer:
-      "Scavland updates land throughout Steam Early Access. As observed 2026-09-04, the Steam Community hub is the official source for each Scavland update entry, and developers NoShadow and publisher UNSUBSCRIBE have not yet published a public roadmap beyond the launch window. Cooperative multiplayer is listed as a planned future update on the Steam store page. No specific post-launch patch version or change list has been published as of this date, so this status page lists confirmed channels only and does not invent a version.",
+      "Scavland v0.5.169 shipped on Sep 5, 2026 as the Early Access day-one patch and is the most prominent post-launch change set so far. The patch added Explorer mode, doubled player stamina, added campfire healing, added NPC indicator reticles, and stacked IFAKs up to 3; the gun-explosion threshold was reduced from 50% to 30%, and the death mechanic was softened so equipment stays on the player and only some backpack items are dropped at the death location. The community-tracked pending v0.5.121 patch is described on the scavland.wiki updates page as the next balance pass. The developer-pinned Steam Discussions thread by Lucasmml titled We Hear You - Changes Are Coming is the canonical source for the next change list and signals ongoing balance work. A versioned public roadmap beyond the launch window is not announced as of 2026-09-08.",
     keyFacts: [
-      { label: "Canonical source", value: "Steam Community hub (AppID 3373500)" },
+      { label: "Day-one patch", value: "v0.5.169 (shipped 2026-09-05)" },
+      { label: "Pending balance patch", value: "v0.5.121 (not yet a published Steam release)" },
+      { label: "Developer signal", value: "We Hear You - Changes Are Coming (pinned Steam Discussions thread)" },
       { label: "Early Access launch", value: "2026-09-04" },
-      { label: "Public roadmap", value: "Not announced as of 2026-09-04" },
       { label: "Co-op status", value: "Planned in future updates" },
-      { label: "Developer / co-publisher", value: "NoShadow / NoShadow + UNSUBSCRIBE" },
     ],
     modules: [
       {
-        id: "updates-patch-notes",
+        id: "updates-v05169-headline",
         type: "prose",
-        heading: "Scavland Updates: Latest Patch Notes",
+        heading: "Scavland v0.5.169 (Sep 5, 2026) — the day-one patch",
         body:
-          "The latest individual Scavland update entry is whatever the Steam Community hub most recently lists at the time you open it, dated and titled by the developer. As observed 2026-09-04, the Scavland Steam Community hub shows news and announcements posted by NoShadow and UNSUBSCRIBE in the lead-up to Early Access. The full text of every patch note is published there first, and this page does not transcribe or paraphrase those notes to avoid drift. Treat each Steam Community entry as the authoritative source for the exact version string, file size, and change list.\n\nTo avoid reading a paraphrased summary as if it were an official log, point readers directly at the hub rather than at any external paraphrase. The Steam Community hub also surfaces an announcement-level summary at the top of each entry, which is enough for most Early Access players to decide whether to restart their client.",
-        links: [STEAM_COMMUNITY],
+          "Scavland v0.5.169 shipped on Sep 5, 2026 as the first public patch after the planned Sep 4, 2026 Early Access launch. The patch is documented in detail on the scavland.wiki updates page and mirrored on the third-party patch notes index at vgspoilers.com; together those two sources describe the day-one change set without depending on a single paraphrase. Treat the Steam Community hub news entry for AppID 3373500 as the canonical text for any patch version, because the developer publishes the in-client announcement there first.\n\nWhat v0.5.169 changed on day one, per the wiki updates page and the vgspoilers mirror: Explorer mode was added as a separate death-penalty-toggle option that softens the hardcore death-cost framing; player stamina was doubled; campfire healing was added to the world; NPC indicator reticles were added so players can read NPC hostility from the UI; IFAK stacking was raised so up to 3 IFAKs can be carried in the inventory; and the gun-explosion threshold was reduced from 50% to 30%, which means more firearms degrade into an explosive end-state faster. The death mechanic itself was softened so equipment is kept on death and only a subset of backpack items is dropped at the death location, which the death-and-recovery page documents in full.",
+        links: [STEAM_COMMUNITY, SCAVLAND_WIKI_UPDATES, VGS_V05169],
       },
       {
-        id: "updates-news-feed",
+        id: "updates-v05169-stamina",
         type: "prose",
-        heading: "Steam Community News Feed Pointer",
+        heading: "Stamina, campfire, IFAK stacking — the v0.5.169 QoL trio",
         body:
-          "The Steam Community hub at https://steamcommunity.com/app/3373500 hosts the live news feed for Scavland. Each post includes a publication date, a developer tag, and links to the matching Steam announcement. As observed 2026-09-04, the hub is the channel where patch notes and small Early Access hotfixes appear before any third-party outlet reprints them. Check the hub first when you want the canonical text of a Scavland update, because the title and description fields of the news entry are written by the developer and rarely differ from the in-client announcement.",
-        links: [STEAM_COMMUNITY],
+          "Three v0.5.169 changes read as pure quality-of-life rather than balance work, which is why they ship together in player writeups of the patch. Stamina was doubled, which extends the time a player can sprint, dodge, or perform melee actions before the stamina bar drains. Campfire healing was added, which means a player who builds or finds a campfire can use it to recover health rather than relying solely on consumables. IFAK stacking was raised so up to 3 IFAKs can be carried, which improves the inventory economy around first-aid kits without making them trivial.\n\nThese three changes are the read of the day-one patch that shows up consistently in community signal — the developer-pinned We Hear You thread by Lucasmml cites them in the same balance-parity paragraph as the softened death cost and the gun-explosion threshold. They are not framed as a major redesign; they are framed as the small fixes that make the Sep 4 launch build feel closer to a polished Early Access state.",
+        links: [SCAVLAND_WIKI_UPDATES, VGS_V05169],
+      },
+      {
+        id: "updates-v05121-pending",
+        type: "prose",
+        heading: "Pending v0.5.121 — what the next balance pass targets",
+        body:
+          "The pending v0.5.121 patch is described on the scavland.wiki updates page as the next balance pass; as of 2026-09-08 it is not a published Steam release on the AppID 3373500 hub, so the change list should be treated as a watch-list item rather than a confirmed patch. The same wiki updates entry tracks specific trader-economy adjustments that align with the active Steam General Discussions thread What to sell, and to who? by Mads — that is, the v0.5.121 line items that intersect with the trader balance question.\n\nWhat the public source set does say about v0.5.121: it is positioned as a balance patch on the wiki updates page, it carries trader-balance adjustments that have not been published as Steam patch notes yet, and it is the next numbered entry after v0.5.169 in the community tracker. Until a Steam Community news entry ships the v0.5.121 patch notes for AppID 3373500, treat the v0.5.121 line items as unannounced rather than as confirmed patch content.",
+        links: [SCAVLAND_WIKI_UPDATES],
+      },
+      {
+        id: "updates-pinned-thread",
+        type: "prose",
+        heading: "We Hear You - Changes Are Coming — the developer-pinned next-patch thread",
+        body:
+          "The Steam Discussions thread titled We Hear You - Changes Are Coming by Lucasmml is the developer-pinned post on the AppID 3373500 discussions index and is the strongest developer-side signal that the next patch is being scoped in response to player feedback. The thread is pinned on top of the Scavland discussions list, which means it is the canonical first stop for any player who wants to see what the developer has publicly committed to addressing next.\n\nThe player threads that the pinned post responds to are the active Steam General Discussions threads on death-cost salience, balance, and combat: yeah this is too unforgiving by kseidon, I was excited about this game by Angry_Tanuki_, Баланс (Balance) by Voron, Ratmother op ?!? by Blutwolf83, and the tongue monsters are ridiculous by ZukoThePrince. The developer-pinned post is the buy-side and player-side anchor for the next change list, so any Scavland update should be read alongside this thread before assuming a line item is confirmed.",
+        links: [STEAM_PINNED, STEAM_DISCUSSIONS],
       },
       {
         id: "updates-coop-status",
         type: "prose",
         heading: "Planned Cooperative Multiplayer Status",
         body:
-          "The Steam store page describes cooperative multiplayer as planned in future updates, and single-player as the launch mode on Sep 4, 2026. As observed 2026-09-04, the planned Early Access release is Sep 4, 2026, and no specific Scavland update has enabled co-op; the first public patch and the first public Early Access roadmap entries are not announced as of 2026-09-04. Track any change to this status through the Scavland updates news on the Steam Community hub and the developer X account once Early Access opens, then check the Scavland multiplayer page for a refreshed summary.",
+          "The Steam store page describes cooperative multiplayer as planned in future updates, and single-player as the launch mode on Sep 4, 2026. As of 2026-09-08, no Scavland update has enabled co-op; the planned Early Access release is single-player, and the Steam Community hub has not yet published a co-op-enabling patch entry. Track any change to this status through the Scavland updates news on the Steam Community hub and the developer X account once Early Access opens, then check the Scavland multiplayer page for a refreshed summary.",
         links: [STEAM_STORE, X_LINK],
       },
       {
@@ -903,23 +926,31 @@ export const scavlandPages: PageContent[] = [
         type: "prose",
         heading: "Early Access Roadmap Status",
         body:
-          "A public Early Access roadmap for Scavland is not announced as of 2026-09-04. The Steam store page references future updates only in the context of cooperative multiplayer. NoShadow has not published a versioned public roadmap listing specific feature milestones, balance passes, content drops, or stability targets beyond launch. The earliest reasonable signal will be a Steam Community news post tagged as an Early Access roadmap; until that post appears, this status section records the absence rather than predicting its content.",
-        links: [STEAM_STORE],
+          "A versioned public Early Access roadmap for Scavland is not announced as of 2026-09-08. The Steam store page references future updates only in the context of cooperative multiplayer, and the developer-pinned We Hear You - Changes Are Coming thread functions as the developer-side next-change-list signal rather than a versioned roadmap with feature milestones, balance passes, content drops, or stability targets. NoShadow has not published a public roadmap file listing concrete milestones beyond the launch window. The earliest reasonable signal of a roadmap entry will be a Steam Community news post tagged as an Early Access roadmap; until that post appears, this section records the absence rather than predicting its content.",
+        links: [STEAM_STORE, STEAM_PINNED],
       },
       {
         id: "updates-official-channels",
         type: "prose",
         heading: "Where to Follow Official Announcements",
         body:
-          "Three official channels carry Scavland updates and roadmap signals: the Steam Community hub news feed, the developer X account at https://x.com/Scavland_, and the official Discord at https://discord.com/invite/scavland. The official site at https://scavland.com/ links to each of these from its community section. The official Patreon at https://www.patreon.com/cw/scavland carries longer-form devlog entries. Pick the channel that matches the urgency of your question: Steam news for ship-time accuracy, X for short status notes, Discord for live clarification, and Patreon for background reasoning.",
-        links: [STEAM_COMMUNITY, X_LINK, DISCORD_LINK, PATREON_LINK, OFFICIAL_SITE],
+          "Four official channels carry Scavland updates and roadmap signals: the Steam Community hub news feed, the developer-pinned We Hear You - Changes Are Coming Steam Discussions thread by Lucasmml, the developer X account at https://x.com/Scavland_, and the official Discord at https://discord.com/invite/scavland. The official site at https://scavland.com/ links to each of these from its community section, and the official Patreon at https://www.patreon.com/cw/scavland carries longer-form devlog entries. Pick the channel that matches the urgency of the question: Steam news for ship-time accuracy, the pinned Steam Discussions thread for the next change list, X for short status notes, Discord for live clarification, and Patreon for background reasoning.",
+        links: [STEAM_COMMUNITY, STEAM_PINNED, X_LINK, DISCORD_LINK, PATREON_LINK, OFFICIAL_SITE],
+      },
+      {
+        id: "updates-fact-boundary",
+        type: "callout",
+        tone: "caution",
+        title: "Fact boundary — patch notes and roadmap",
+        body:
+          "Confirmed: Scavland v0.5.169 shipped on Sep 5, 2026 with Explorer mode, doubled stamina, campfire healing, NPC indicator reticles, IFAK stacking up to 3, a reduced gun-explosion threshold from 50% to 30%, and the softened death-penalty (keep equipment on death, only some backpack items lost). Source: scavland.wiki updates page cross-checked against the vgspoilers.com v0.5.169 patch notes mirror.\n\nUnannounced: the official Steam patch-notes entry for v0.5.121, the exact next-patch line items from the We Hear You thread (custom map markers, increased camera zoom, quest ticks, Help With A Quest, Ratmother boss, tongue monster tuning — watch-list items only until Steam patch notes confirm), a versioned public Early Access roadmap, and any future price moves beyond NoShadow's price-stability pledge through Early Access.",
       },
     ],
-    faqIds: ["updates-last", "updates-coop-enabled", "updates-public-roadmap"],
-    relatedPageIds: ["release-date", "multiplayer-coop", "reviews"],
+    faqIds: ["updates-last", "updates-v05169", "updates-v05121", "updates-pinned-thread", "updates-coop-enabled", "updates-public-roadmap"],
+    relatedPageIds: ["release-date", "multiplayer-coop", "death-and-recovery"],
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "official",
-    lastReviewed: LAST_REVIEWED,
+    lastReviewed: "2026-09-08",
   },
 
   {
@@ -1376,6 +1407,209 @@ export const scavlandPages: PageContent[] = [
       "death-explorer-mode",
     ],
     relatedPageIds: ["updates", "weapons-attachments", "factions"],
+    schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
+    sourceStatus: "official",
+    lastReviewed: "2026-09-08",
+  },
+
+  {
+    id: "purchase-facts",
+    translationKey: "purchase-facts",
+    locale: "en-US",
+    routeKind: "fixed",
+    slug: "purchase-facts",
+    url: "/purchase-facts",
+    pageType: "guide",
+    presentation: { shell: "content", variant: "reading-right-rail" },
+    h1: "Scavland Price and Early Access Purchase Facts: $19.99, $17.99 Discount Window",
+    seoTitle: "Scavland Price: $19.99 Base, $17.99 Discount Until Sep 11, 12-24 Month EA",
+    metaDescription:
+      "Scavland price is $19.99 with a 10% introductory discount to $17.99 ending Sep 11, 2026. NoShadow's price-stability pledge holds the price steady through Early Access, which the developer targets for 12 to 24 months.",
+    summary:
+      "Scavland price is $19.99 USD on Steam AppID 3373500, with a 10% introductory discount to $17.99 that ends on Sep 11, 2026. NoShadow has publicly stated the Scavland price will remain consistent from Early Access through to full release, with the exception of seasonal discounts. The Scavland Early Access window is targeted at roughly 12 to 24 months from the planned Sep 4, 2026 launch.",
+    hero: {
+      eyebrow: "Guide",
+      subtitle:
+        "How much Scavland costs on Steam today, when the introductory discount window closes, how long Early Access is expected to run, and what the build state is at the buy decision.",
+      ctas: [
+        { label: "Release date", href: "/release-date" },
+        { label: "Updates", href: "/updates" },
+        { label: "Reviews", href: "/reviews" },
+      ],
+    },
+    quickAnswer:
+      "Scavland price is $19.99 USD on Steam AppID 3373500. A 10% introductory discount drops the price to $17.99 USD and that introductory offer ends on Sep 11, 2026. NoShadow's stated price-stability pledge is that \"the price of Scavland will remain consistent from Early Access through to full release, with the exception of seasonal discounts.\" The planned Early Access launch is Sep 4, 2026, and the Early Access window itself is targeted at roughly 12 to 24 months.",
+    keyFacts: [
+      { label: "Base price", value: "$19.99 USD" },
+      { label: "Introductory price", value: "$17.99 USD (10% off)" },
+      { label: "Discount ends", value: "2026-09-11" },
+      { label: "Early Access window", value: "~12-24 months" },
+      { label: "Price stability", value: "Locked through Early Access (NoShadow pledge)" },
+    ],
+    modules: [
+      {
+        id: "purchase-facts-price",
+        type: "prose",
+        heading: "Scavland Price Today: $19.99 Base, $17.99 Discount",
+        body:
+          "The Scavland Steam store page for AppID 3373500 lists the base price at $19.99 USD. A 10% introductory offer is active at scan time, which drops the buy-side price to $17.99 USD. The introductory offer has an explicit end date of September 11, 2026, which is the only sourceable reason the buy decision is time-bounded this week. After Sep 11, 2026 the price reverts to $19.99 USD on the same Steam store entry; the launch-week introductory discount is not a permanent reduction.\n\nThe price is per the Steam store entry for AppID 3373500 and is presented in USD. Region-specific pricing in other currencies is set by Steam's regional pricing rules and is not asserted as a specific value on this page; readers in non-USD regions should check the Steam store page directly for their local price and any region-specific introductory discount.",
+        links: [STEAM_STORE],
+      },
+      {
+        id: "purchase-facts-discount-window",
+        type: "prose",
+        heading: "Why the Sep 11 Discount Window Matters at the Buy Decision",
+        body:
+          "The Sep 11, 2026 end date is the reason the buy-decision question is time-bounded. The introductory discount is the only published price reduction on the Scavland store entry at scan time; outside the introductory window, the Steam store page shows the $19.99 USD base price without a launch-week discount.\n\nWhat that means in practice: a buyer who wants the lowest published price for Scavland at launch should buy before Sep 11, 2026 to lock in $17.99 USD. A buyer who waits past Sep 11 loses the $2.00 USD introductory discount but does not lose anything else — NoShadow's price-stability pledge keeps the $19.99 base price steady through Early Access, so the post-window price is the same as the launch-day base price.",
+        links: [STEAM_STORE],
+      },
+      {
+        id: "purchase-facts-ea-window",
+        type: "prose",
+        heading: "Early Access Window: 12 to 24 Months from Sep 4, 2026",
+        body:
+          "The Scavland Steam store entry lists a planned Early Access duration of \"roughly 12 to 24 months\" from the planned Sep 4, 2026 launch. That is the developer-published Early Access window for the Scavland build, not a 1.0 release date. The Early Access window covers the Act I content scope at launch, with Act II and Act III, additional weapons and bunkers, cooperative multiplayer, and ongoing AI, balance, and quality-of-life work listed by NoShadow as part of the live support plan.\n\nWhat that means for the buy decision: a buyer who wants the Act I content as soon as it ships can buy the Sep 4, 2026 launch build; a buyer who wants Act II or the cooperative multiplayer roadmap items should expect them during the 12-24 month Early Access window rather than at launch. No specific 1.0 exit date is published as of 2026-09-08.",
+        links: [STEAM_STORE],
+      },
+      {
+        id: "purchase-facts-price-stability",
+        type: "prose",
+        heading: "NoShadow's Price-Stability Pledge Through Early Access",
+        body:
+          "NoShadow has publicly stated on the Steam store entry for AppID 3373500 that \"the price of Scavland will remain consistent from Early Access through to full release, with the exception of seasonal discounts.\" The pledge functions as the buy-side answer to the \"Pricing\" Steam Discussions thread by Mars Marder and the related \"How early is this?\" thread by phlux: the developer is committing to a stable launch-window price, with seasonal Steam sales as the only named exception.\n\nWhat that means in practice: the post-Sep 11 $19.99 USD price should hold through the planned 12-24 month Early Access window, with reductions limited to seasonal Steam sale windows. Any non-seasonal price move would surface first on the Steam store page for AppID 3373500 and on the Steam Community hub news feed; until then, the pledge is the published anchor for the buy-decision question.",
+        links: [STEAM_STORE],
+      },
+      {
+        id: "purchase-facts-act-i-scope",
+        type: "prose",
+        heading: "What Ships in Act I at the Buy Decision",
+        body:
+          "The buy-decision question is not only about price; it is also about which content ships with the planned Sep 4, 2026 launch build versus what lands later. Per the Steam store page for AppID 3373500, the Act I launch build covers the single-player survival RPG loop, a handcrafted open world layered with procedural underground bunkers, the 25+ weapon and 300+ attachment arsenal, the 10-faction reputation system, traders, contracts, main and side quests, the Mist anomaly as a named weather hazard, and Steam Deck compatibility alongside controller support. The Act II and Act III content, additional weapons and bunkers, and cooperative multiplayer are listed as live-support items rather than launch items.\n\nThe v0.5.169 day-one patch on Sep 5, 2026 added Explorer mode, doubled player stamina, added campfire healing, added NPC indicator reticles, and stacked IFAKs up to 3, so the build state at the buy decision is materially better than the pre-patch build. The post-patch mechanic also keeps equipment on death and only drops a subset of backpack items, which softens the hardcore death-cost framing; the death-and-recovery page documents that change in detail. Full patch notes are on the updates page; the v0.5.169 specifics are mirrored on vgspoilers.com.",
+        links: [STEAM_STORE, VGS_V05169],
+      },
+      {
+        id: "purchase-facts-review-band",
+        type: "prose",
+        heading: "Scavland Review Band and Build State at Buy Time",
+        body:
+          "The Steam store page for AppID 3373500 shows the Scavland review band tracking Mostly Positive, with the review count moving during launch week as the first wave of Early Access players post impressions. A review-band reading is a build-state signal rather than a content rating: it tells a buyer how the current build feels to players, not whether the buy is worth it on price alone. The Scavland reviews page links the RPGWatch announcement, the Reddit /r/IndieGaming recommendation thread, and the live Steam store community summary so the buy decision can be cross-checked against community signal.\n\nTwo signals in the same window matter for the buy decision. The Steam rating moved from Mixed toward Mostly Positive during launch week as the v0.5.169 day-one patch landed and the developer pinned the \"We Hear You - Changes Are Coming\" thread on Steam Discussions. The pinned thread is the strongest developer-side commitment to ongoing balance work, which is the buy-side signal a buyer wants when the price-stability pledge is the only published price anchor.",
+        links: [STEAM_STORE, STEAM_PINNED],
+      },
+      {
+        id: "purchase-facts-boundary",
+        type: "callout",
+        tone: "confirmed",
+        title: "Fact boundary — buy-decision numbers",
+        body:
+          "Confirmed: $19.99 USD base price, $17.99 USD introductory price (10% off), Sep 11, 2026 discount end date, ~12-24 month Early Access window, NoShadow price-stability pledge through Early Access. Source: Steam store page for AppID 3373500.\n\nUnannounced: any region-specific introductory pricing, any post-Early Access price change beyond the named seasonal discounts, and the specific Act II / Act III launch dates within the Early Access window.",
+      },
+    ],
+    faqIds: [
+      "purchase-price",
+      "purchase-discount-end",
+      "purchase-ea-length",
+      "purchase-price-stable",
+      "purchase-act-i",
+      "purchase-worth-waiting",
+    ],
+    relatedPageIds: ["release-date", "updates", "reviews"],
+    schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
+    sourceStatus: "official",
+    lastReviewed: "2026-09-08",
+  },
+
+  {
+    id: "trader-economy",
+    translationKey: "trader-economy",
+    locale: "en-US",
+    routeKind: "fixed",
+    slug: "trader-economy",
+    url: "/trader-economy",
+    pageType: "guide",
+    presentation: { shell: "content", variant: "reading-right-rail" },
+    h1: "Scavland Trader Economy: What to Sell, to Whom, and at What Reputation",
+    seoTitle: "Scavland Trader Economy: 9 Act I Traders, Reputation Tiers, What to Sell",
+    metaDescription:
+      "Scavland trader economy: 9 named Act I traders with location and reputation gate, the high-profit barter goods (spark plugs, lighters, wire coils, weapon springs), the loot-only Mosin-Nagant, and the -300 hostile / 0 neutral reputation tier framework.",
+    summary:
+      "Scavland ships 9 named Act I traders per the community wiki factions page, gated by a per-faction reputation system with a -300 hostile threshold and a 0 neutral baseline that Raisa can reset via courier missions. The four named high-profit barter goods — spark plugs, functional lighters, wire coils, and weapon springs — are worth holding for the right trader, and the Mosin-Nagant rifle is loot-only and worth keeping rather than selling. Donations to Grigory and courier missions for Raisa are the named reputation-gain routes.",
+    hero: {
+      eyebrow: "Guide",
+      subtitle:
+        "The 9 named Act I traders, where each one sits on the map, what each one buys at each reputation tier, and which barter goods to liquidate versus keep.",
+      ctas: [
+        { label: "Factions", href: "/factions" },
+        { label: "Updates", href: "/updates" },
+        { label: "Weapons & attachments", href: "/weapons-attachments" },
+      ],
+    },
+    quickAnswer:
+      "Per the scavland.wiki factions page, Scavland ships 9 named Act I traders — Nadja, Sasha, Raisa, Mosin, Voron, Bertha, Katya, Grigory, and Bro — each gated by per-faction reputation. The reputation tier framework on the wiki uses -300 as the hostile threshold, 0 as the neutral baseline (resettable by Raisa in exchange for courier missions), and named positive tiers above 0 that unlock better stock. The four high-profit barter goods — spark plugs, functional lighters, wire coils, and weapon springs — are worth holding for the right trader, and the Mosin-Nagant is loot-only and worth keeping. Donations to Grigory and courier missions for Raisa are the named reputation-gain routes.",
+    keyFacts: [
+      { label: "Act I trader count", value: "9 named traders (community wiki)" },
+      { label: "Hostile threshold", value: "-300 reputation" },
+      { label: "Neutral baseline", value: "0 reputation (Raisa reset)" },
+      { label: "Named barter goods", value: "Spark plugs, lighters, wire coils, weapon springs" },
+      { label: "Loot-only rifle", value: "Mosin-Nagant (keep, do not sell)" },
+    ],
+    modules: [
+      {
+        id: "trader-economy-roster",
+        type: "prose",
+        heading: "The 9 Named Act I Traders",
+        body:
+          "Per the scavland.wiki factions page, Scavland Act I ships 9 named traders across the post-apocalyptic Soviet map: Nadja, Sasha, Raisa, Mosin, Voron, Bertha, Katya, Grigory, and Bro. The Steam store page for AppID 3373500 confirms a 10-faction reputation system and references traders as one of the reputation-driven systems, but the named 9-trader roster itself is community-tracked on scavland.wiki rather than posted as a named list on the Steam store entry.\n\nWhat this means for the buy-decision and the first-week economy: each named trader is anchored to a specific faction, and each faction tracks its own reputation rather than sharing a single global standing. The named locations and the named reputation gates are listed on the wiki factions page; the per-trader buy prices for named barter goods (spark plugs, functional lighters, wire coils, weapon springs) and the loot-only Mosin-Nagant are also tracked there.",
+        links: [SCAVLAND_WIKI_FACTIONS, STEAM_STORE],
+      },
+      {
+        id: "trader-economy-reputation-tiers",
+        type: "prose",
+        heading: "Reputation Tiers: -300 Hostile, 0 Neutral, and Named Positive Tiers",
+        body:
+          "The scavland.wiki factions page describes a per-faction reputation tier framework with a -300 hostile threshold below which a trader will refuse to trade, a 0 neutral baseline that functions as the starting point after a Raisa reset, and named positive tiers above 0 that progressively unlock better stock and better buy prices. The -300 hostile threshold is the canonical bottom of the tradeable range; the 0 neutral baseline is the canonical midpoint and the reset point for Raisa courier missions.\n\nWhat this means in practice: a player who drops below -300 with any named trader is locked out until they raise their standing through a named route (Grigory donations, Raisa courier missions, contract completion, side-quest completion). The per-trader stock unlocks at each positive tier are community-tracked on the wiki factions page rather than posted as a versioned table on the Steam store AppID 3373500 page, so the wiki is the closest sourceable answer to the tier question.",
+        links: [SCAVLAND_WIKI_FACTIONS, STEAM_STORE],
+      },
+      {
+        id: "trader-economy-barter-goods",
+        type: "prose",
+        heading: "High-Profit Barter Goods: Spark Plugs, Lighters, Wire Coils, Weapon Springs",
+        body:
+          "The scavland.wiki factions page lists 4 named high-profit barter goods that are worth holding for the right trader rather than selling to the first open vendor: spark plugs, functional lighters, wire coils, and weapon springs. Each named barter good has a named trader who pays the named rate for it, and the wiki factions page tracks which trader pays the best rate for which good. Selling these four barter goods to the wrong trader is the exact friction that the active Steam General Discussions thread What to sell, and to who? by Mads is asking about.\n\nWhat this means in practice: a player who picks up a spark plug from a procedural bunker or a functional lighter from a settlement should check the wiki factions page before selling it, because the named barter rate at the right trader is materially better than the generic sell price at a nearby open vendor. The loot-only Mosin-Nagant rifle is flagged on the same wiki page as worth keeping rather than selling because of its named value to specific trader requests, so the Mosin-Nagant should not be liquidated at the generic vendor even when the player is low on cash.",
+        links: [SCAVLAND_WIKI_FACTIONS],
+      },
+      {
+        id: "trader-economy-gain-routes",
+        type: "prose",
+        heading: "How to Raise Reputation: Grigory Donations and Raisa Courier Missions",
+        body:
+          "The scavland.wiki factions page lists two named reputation-gain routes for Act I. Donating loot to Grigory buys a wide range of barter goods at a named rate and raises reputation with Grigory's faction; courier missions for Raisa raise reputation with Raisa's faction and additionally let Raisa reset your standing to neutral with any trader who has dropped below the -300 hostile threshold, which is the canonical recovery path after a hostile lockout.\n\nWhat this means in practice: a player who is at the -300 hostile threshold with a named trader should run a Raisa courier mission first (to reset to 0 neutral), then resume trading at the named neutral baseline. A player who is at the 0 neutral baseline with a named trader but wants to reach the named positive tiers should donate barter goods to Grigory and complete courier missions for Raisa in parallel; contract completion and side-quest completion are also listed as reputation sources on the Steam store page for AppID 3373500, but the per-trader delta for each contract or quest is not broken down in the public source set.",
+        links: [SCAVLAND_WIKI_FACTIONS, STEAM_STORE],
+      },
+      {
+        id: "trader-economy-v05121",
+        type: "prose",
+        heading: "Pending v0.5.121 Trader Balance Changes",
+        body:
+          "The scavland.wiki updates page describes the pending v0.5.121 patch as carrying trader-balance adjustments; the two named line items in the wiki tracker are an increase to Nadja's daily screw stockpile and the removal of the Mosin-Nagant from Sasha's Level 0 stock. Both items are positioned as answers to the active Steam General Discussions thread What to sell, and to who? by Mads and the related Bug with selling artifact thread by Brothelli, which are the player-side friction points these adjustments are aimed at.\n\nWhat this means in practice: a player who plans to sell the Mosin-Nagant to Sasha at Level 0 reputation should not rely on that trade being available after v0.5.121 ships, and a player who relies on Nadja's screw stockpile for crafting should expect a higher daily count after v0.5.121 lands. As of 2026-09-08, v0.5.121 is not a published Steam release on the AppID 3373500 hub, so these adjustments are watch-list items rather than confirmed patch content.",
+        links: [SCAVLAND_WIKI_UPDATES, SCAVLAND_WIKI_FACTIONS],
+      },
+      {
+        id: "trader-economy-fact-boundary",
+        type: "callout",
+        tone: "confirmed",
+        title: "Fact boundary — trader economy",
+        body:
+          "Confirmed: 9 named Act I traders (Nadja, Sasha, Raisa, Mosin, Voron, Bertha, Katya, Grigory, Bro); 4 named high-profit barter goods (spark plugs, functional lighters, wire coils, weapon springs); the Mosin-Nagant as loot-only and worth keeping; -300 hostile threshold and 0 neutral baseline; Grigory donations and Raisa courier missions as the named gain routes. Source: scavland.wiki factions page cross-checked against the scavland.wiki updates page for v0.5.121 line items.\n\nUnannounced: the per-trader buy-price table for each named barter good, the exact positive-tier labels above 0, the exact Sasha Level 0 Mosin-Nagant price before the v0.5.121 removal, the exact trader map pins and fast-travel routes between traders, and any faction additions beyond Act I.",
+      },
+    ],
+    faqIds: [
+      "trader-how-many",
+      "trader-reputation-gate",
+      "trader-what-to-sell",
+      "trader-gain-rep",
+      "trader-v05121",
+    ],
+    relatedPageIds: ["factions", "updates", "weapons-attachments"],
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "official",
     lastReviewed: "2026-09-08",
